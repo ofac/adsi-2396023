@@ -4,7 +4,7 @@ Repositorio de Analisis y Desarrollo de Sistemas de Información (ADSI)
 ## Themes:
 
 ### 01-emmet
-### 02-html
+
 ### 03-css
 ### 04-javascript
 
