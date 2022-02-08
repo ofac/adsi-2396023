@@ -8,4 +8,4 @@
 | 3. CSS        | Style Sheets (Presentation)       | [open folder](03-css/)        |
 | 4. Javascript | Programming Language (Clien-Side) | [open folder](04-javascript/) |
 ---
-![saitame](https://static.wikia.nocookie.net/onepunchman/images/c/c0/Anime_-_Saitama.jpg/revision/latest?cb=20200308230733&path-prefix=es)
+![sena](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sena_Colombia_logo.svg/1200px-Sena_Colombia_logo.svg.png)
