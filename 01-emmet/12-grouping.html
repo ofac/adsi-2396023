@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Child: > </title>
+    <title> Grouping: () </title>
     <style>
         body {
             background: linear-gradient(#ccc, #666);
@@ -39,7 +39,7 @@
             border-radius: 4px;
             display: block;
             color: #fff;
-            font-size: 2rem;
+            font-size: 1.4rem;
             padding: 14px;
         }
         xmp {
@@ -54,14 +54,17 @@
 </head>
 <body>
     <main>
-        <h1><a href="index.html">⇠</a> Child: > </h1>
+        <h1><a href="index.html">⇠</a> Grouping: () </h1>
         <h3>Example:</h3>
-        <code>ul>li>a</code>
+        <code>(header>nav)+(section>article)</code>
         <h3>Result:</h3>
         <xmp>
-<ul>
-    <li><a href=""></a></li>
-</ul>
+<header>
+    <nav></nav>
+</header>
+<section>
+    <article></article>
+</section>
         </xmp>
     </main>
 </body>
