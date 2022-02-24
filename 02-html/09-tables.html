@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        table {
+            margin: 1rem auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        table th {
+            background-color: #d47a12;
+            color: #fff;
+        }
+        table th,
+        table td {
+            border: 1px solid #333;
+            padding: 8px;
+        }
+        tfoot tr td {
+            background-color: #ffffff99;
+            text-align: center;
+        }
+        tr:nth-of-type(even) {
+            background-color: #ffffff99;
+        }
+        tr:nth-of-type(odd) {
+            background-color: #00000033;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Tables</h1>
+        </header>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Month</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Water</td>
+                        <td>January</td>
+                        <td>$80</td>
+                    </tr>
+                    <tr>
+                        <td>Internet</td>
+                        <td>February</td>
+                        <td>$40</td>
+                    </tr>
+                    <tr>
+                        <td>Light</td>
+                        <td>March</td>
+                        <td>$120</td>
+                    </tr>
+                    <tr>
+                        <td>Gas</td>
+                        <td>April</td>
+                        <td>$30</td>
+                    </tr>
+                    <tr>
+                        <td>Garbage</td>
+                        <td>May</td>
+                        <td>$15</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">2022</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

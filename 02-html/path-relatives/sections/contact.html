@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Relatives</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+        }
+        header {
+            margin: 2rem;
+        }
+        header nav {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+        header nav a:link,
+        header nav a:visited {
+            background-color: #ccc;
+            color: #333;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            transition: all 0.2s ease-out;
+        }
+        header nav a:hover {
+            background-color: #333;
+            color: #ccc;
+        }
+        header nav a.active {
+            background-color: #5c8549;
+            color: #fff;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        section h1 {
+            border-bottom: 2px solid #333;
+            text-align: center;
+            font-size: 4rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a class="active" href="">Contact</a>
+            </nav>
+        </header>
+        <section>
+            <h1>Contact</h1>
+            <img src="../images/contact.png">
+        </section>
+    </main>
+</body>
+</html>

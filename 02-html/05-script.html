@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Script</h1>
+        </header>
+        <section>
+            <h2 id="msj"></h2>
+        </section>
+    </main>
+    <script>
+        const msj  = document.getElementById('msj');
+        if (name = prompt("What's your name ?")) {
+            msj.innerText = "Welcome: " + name;
+        } else {
+            msj.innerText = "Welcome: Guest!";
+        }
+    </script>
+</body>
+</html>
