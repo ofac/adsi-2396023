@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Selectors</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        /* Universal - - - - - - - - - - - - - */
+        section * {
+            border: 2px solid slateblue;
+            padding: 10px;
+        }
+        /* Type - - - - - - - - - - - - - - - - */
+        ul {
+            list-style: none;
+        }
+        li {
+            font-size: 1.2rem;
+        }
+        /* Descending - - - - - - - - - - - - - - */
+        ul li {
+            background-color: cadetblue;
+            color: white;
+        }
+        /* Class - - - - - - - - - - - - - - - - - */
+        .upper {
+            text-transform: uppercase;
+        }
+        .center {
+            text-align: center;
+        }
+        /* Identification - - - - - - - - - - - - */
+        #important {
+            background-color: slateblue;
+            font-weight: 500;
+        }
+        /* Combine - - - - - - - - - - - - - - - - */
+        section ul.animes li#important {
+            color: greenyellow
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Basic Selectors</h1>
+        </header>
+        <section>
+            <ul class="animes">
+                <li class="upper center">Kimetsu no yaiba</li>
+                <li id="important">Shingeki no kyojin</li>
+                <li>Jujutsu Kaisen</li>
+                <li>Nanatsu no taizai</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
