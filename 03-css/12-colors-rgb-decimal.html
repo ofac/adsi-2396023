@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors RGB Decimal</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        section div.row {
+            margin: 0 auto;
+            width: 100%;
+        }
+        section div div {
+            background-color: rgb(192, 192, 192);
+            color: rgb(0, 0, 0);
+            font-size: 0.5rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-left: -5px;
+            text-align: center;
+            line-height: 5rem;
+            height: 80px;
+            width: 20%;
+            transition: all 0.2s ease-in;
+        }
+        section div div:first-child {
+            margin-left: 0;
+        }
+        section div div:first-child,
+        section div div:last-child {
+            color: rgb(255, 255, 255);
+        }
+        section div div:hover {
+            transform: scale(1.8);
+        }
+        /* First Row */
+        .maroon { background-color: rgb(128, 0, 0); }
+        .red    { background-color: rgb(255, 0, 0); }
+        .orange { background-color: rgb(255, 165, 0); }
+        .yellow { background-color: rgb(255, 255, 0); }
+        .olive  { background-color: rgb(128, 128, 0); }
+        /* Second Row */
+        .purple  { background-color: rgb(128, 0, 128); }
+        .fuchsia { background-color: rgb(255, 0, 255); }
+        .white   { background-color: rgb(255, 255, 255); }
+        .lime    { background-color: rgb(0, 255, 0); }
+        .green   { background-color: rgb(0, 128, 0); }
+        /* Third Row */
+        section div.row.row3 { 
+            width: 80%;
+        }
+        section div.row.row3 div { 
+            width: 25%;
+        }
+        .navy  { background-color: rgb(0, 0, 128); }
+        .blue  { background-color: rgb(0, 0, 255); }
+        .aqua  { background-color: rgb(0, 255, 255); }
+        .teal  { background-color: rgb(0, 128, 128); }
+        /* Fourth Row */
+        section div.row.row4 { 
+            width: 60%;
+        }
+        section div.row.row4 div { 
+            width: 33.33%;
+        }
+        .black  { background-color: rgb(0, 0, 0); }
+        .silver { background-color: rgb(192, 192, 192); }
+        .gray   { background-color: rgb(128, 128, 128); }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Colors RGB Decimal</h1>
+        </header>
+        <section>
+            <!-- First Row -->
+            <div class="row row1">
+                <div class="maroon">rgb(128,0,0)</div>
+                <div class="red">rgb(255,0,0)</div>
+                <div class="orange">rgb(255,165,0)</div>
+                <div class="yellow">rgb(255,255,0)</div>
+                <div class="olive">rgb(128,128,0)</div>
+            </div>
+            <!-- Second Row -->
+            <div class="row row2">
+                <div class="purple">rgb(128,0,128)</div>
+                <div class="fuchsia">rgb(255,0,255)</div>
+                <div class="white">rgb(255,255,255)</div>
+                <div class="lime">rgb(0,255,0)</div>
+                <div class="green">rgb(0,128,0)</div>
+            </div>
+            <!-- Third Row -->
+            <div class="row row3">
+                <div class="navy">rgb(0,0,128)</div>
+                <div class="blue">rgb(0,0,255)</div>
+                <div class="aqua">rgb(0,255,255)</div>
+                <div class="teal">rgb(0,128,128)</div>
+            </div>
+            <!-- Fourth Row -->
+            <div class="row row4">
+                <div class="black">rgb(0,0,0)</div>
+                <div class="silver">rgb(192,192,192)</div>
+                <div class="gray">rgb(128,128,128)</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

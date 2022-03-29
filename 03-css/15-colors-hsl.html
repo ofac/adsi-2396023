@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors HSL</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        section div.row {
+            margin: 0 auto;
+            width: 100%;
+        }
+        section div div {
+            background-color: hsl(0, 0%, 75%);
+            color: hsl(0, 0%, 0%);
+            font-size: 8px;
+            font-weight: 500;
+            display: inline-block;
+            margin-left: -5px;
+            text-align: center;
+            line-height: 5rem;
+            height: 80px;
+            width: 20%;
+            transition: all 0.2s ease-in;
+        }
+        section div div:first-child {
+            margin-left: 0;
+        }
+        section div div:first-child,
+        section div div:last-child {
+            color: #ffffff;
+        }
+        section div div:hover {
+            transform: scale(1.8);
+        }
+        /* First Row */
+        .maroon { background-color: hsl(0, 100%, 25%); }
+        .red    { background-color: hsl(0, 100%, 50%); }
+        .orange { background-color: hsl(39, 100%, 50%); }
+        .yellow { background-color: hsl(60, 100%, 50%); }
+        .olive  { background-color: hsl(60, 100%, 25%); }
+        /* Second Row */
+        .purple  { background-color: hsl(300, 100%, 25%); }
+        .fuchsia { background-color: hsl(300, 100%, 50%); }
+        .white   { background-color: hsl(0, 0%, 100%); }
+        .lime    { background-color: hsl(120, 100%, 50%); }
+        .green   { background-color: hsl(120, 100%, 25%); }
+        /* Third Row */
+        section div.row.row3 { 
+            width: 80%;
+        }
+        section div.row.row3 div { 
+            width: 25%;
+        }
+        .navy  { background-color: hsl(240, 100%, 25%); }
+        .blue  { background-color: hsl(240, 100%, 50%); }
+        .aqua  { background-color: hsl(180, 100%, 50%); }
+        .teal  { background-color: hsl(180, 100%, 25%); }
+        /* Fourth Row */
+        section div.row.row4 { 
+            width: 60%;
+        }
+        section div.row.row4 div { 
+            width: 33.33%;
+        }
+        .black  { background-color: hsl(0, 0%, 0%); }
+        .silver { background-color: hsl(0, 0%, 75%); }
+        .gray   { background-color: hsl(0, 0%, 50%); }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Colors HSL</h1>
+        </header>
+        <section>
+            <!-- First Row -->
+            <div class="row row1">
+                <div class="maroon">hsl(0,100%,25%)</div>
+                <div class="red">hsl(0,100%,50%)</div>
+                <div class="orange">hsl(39,100%,50%)</div>
+                <div class="yellow">hsl(60,100%,50%)</div>
+                <div class="olive">hsl(60,100%,25%)</div>
+            </div>
+            <!-- Second Row -->
+            <div class="row row2">
+                <div class="purple">hsl(300,100%,25%)</div>
+                <div class="fuchsia">hsl(300,100%,50%)</div>
+                <div class="white">hsl(0,0%,100%)</div>
+                <div class="lime">hsl(120,100%,50%)</div>
+                <div class="green">hsl(120,100%,25%)</div>
+            </div>
+            <!-- Third Row -->
+            <div class="row row3">
+                <div class="navy">hsl(240,100%,25%)</div>
+                <div class="blue">hsl(240,100%,50%)</div>
+                <div class="aqua">hsl(180,100%,50%)</div>
+                <div class="teal">hsl(180,100%,25%)</div>
+            </div>
+            <!-- Fourth Row -->
+            <div class="row row4">
+                <div class="black">hsl(0,0%,0%)</div>
+                <div class="silver">hsl(0,0%,75%)</div>
+                <div class="gray">hsl(0,0%,50%)</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
