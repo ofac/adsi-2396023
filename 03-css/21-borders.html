@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        h2 { text-align: center; }
+        div.box {
+            border-style: solid;
+            height: 200px;
+            margin: 0 auto;
+            width: 320px;
+        }
+        div.box1 {
+            /* Border Width - - - - - - - - - - */
+            border-top-width: 2px;
+            border-right-width: 6px;
+            border-bottom-width: 10px;
+            border-left-width: 14px;
+            /* ShortHand - - - - -  - - - - - - */
+            border-width: 2px 6px 10px 14px;
+        }
+        div.box2 {
+            border-width: 14px;
+            /* Border Color - - - - - - - - - - */
+            border-top-color: red;
+            border-right-color: blue;
+            border-bottom-color: green;
+            border-left-color: yellow;
+            /* ShortHand - - - - -  - - - - - - */
+            border-color: red blue green yellow;
+        }
+        div.box3 {
+            border-width: 4px;
+            /* Border Style - - - - - - - - - - */
+            border-top-style: solid;
+            border-right-style: dotted;
+            border-bottom-style: dashed;
+            border-left-style: double;
+            /* ShortHand - - - - -  - - - - - - */
+            border-style: solid dotted dashed double;
+        }
+        div.box4 {
+            border-width: 4px;
+            border-color: crimson;
+            border-style: dotted;
+            /* ShortHand */
+            border: 4px dotted crimson;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Borders</h1>
+        </header>
+        <section>
+            <h2>Border Width:</h2>
+            <div class="box box1"></div>
+            <h2>Border Color:</h2>
+            <div class="box box2"></div>
+            <h2>Border Style:</h2>
+            <div class="box box3"></div>
+            <h2>ShortHand:</h2>
+            <div class="box box4"></div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        .bg {
+            background: linear-gradient(135deg,#00000099 10%,
+                                        transparent 0,
+                                        transparent 50%,
+                                        #00000099 0,
+                                        #00000099 60%,
+                                        transparent 0,
+                                        transparent);
+            background-size: 7.07px 7.07px;
+        }
+        section {
+            position: relative;
+        }
+        div.parent {
+            position: absolute;
+            height: 340px;
+            left: 50%;
+            transform: translateX(-50%) ;
+            width: 380px;
+        }
+        div.child {
+            background-color: #ffffff;
+            height: 200px;
+            font-size: 4rem;
+            text-align: center;
+            line-height: 12rem;
+            /* - - - - - - - -  */
+            /* Y Axis (Vertical) */
+            margin-top: 70px;
+            margin-bottom: 70px;
+            /* X Axis (Horizont) */
+            margin-right: auto;
+            margin-left: auto;
+            /* ShortHand: margin: y x */
+            margin: 70px auto;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Margin</h1>
+        </header>
+        <section>
+            <div class="parent bg">
+                <div class="child">BOX</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
