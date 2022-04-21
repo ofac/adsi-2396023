@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Static</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.parent,
+        div.parent div,
+        div.parent a {
+            border: 2px solid #666;
+            padding: 5px;
+        }
+        div.parent div {
+            margin: 10px;
+        }
+        div.parent div.child1 {
+            height: 60px;
+        }
+        div.parent div.child2 {
+            height: 30px;
+        }
+        div.parent div.child3 {
+            height: 80px;
+        }
+        div.parent:nth-of-type(2) {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Position Static</h1>
+        </header>
+        <section>
+            <h3>Block Elements</h3>
+            <div class="parent">
+                <div class="child1">Block Element</div>
+                <div class="child2">Block Element</div>
+                <div class="child3">Block Element</div>
+            </div>
+            <!--  -->
+            <h3>Inline Elements</h3>
+            <div class="parent">
+                <a href="">Inline Element</a>
+                <a href="">Other Inline Element</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

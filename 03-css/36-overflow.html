@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        article {
+            border: 2px solid #666;
+            height: 220px;
+            margin: 0px auto 80px auto;
+            width: 280px;
+        }
+        article h2 {
+            text-align: center;
+        }
+        article p {
+            text-align: justify;
+            padding: 10px;
+        }
+        article.art01 { overflow: visible;  }
+        article.art02 { overflow: hidden;   }
+        article.art03 { overflow-y: scroll; }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Overflow</h1>
+        </header>
+        <section>
+            <article class="art01">
+                <h2>overflow: visible</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt nesciunt fugiat harum asperiores, veritatis error pariatur dolores ea facere officia tempore placeat ipsa atque ipsam nobis voluptate soluta odio.
+                </p>
+            </article>
+            <article class="art02">
+                <h2>overflow: hidden</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt nesciunt fugiat harum asperiores, veritatis error pariatur dolores ea facere officia tempore placeat ipsa atque ipsam nobis voluptate soluta odio.
+                </p>
+            </article>
+            <article class="art03">
+                <h2>overflow: scroll</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt nesciunt fugiat harum asperiores, veritatis error pariatur dolores ea facere officia tempore placeat ipsa atque ipsam nobis voluptate soluta odio.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
