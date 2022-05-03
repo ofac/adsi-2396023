@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprites</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        figure#runner {
+            background: url(images/anim-sprite.png) no-repeat;
+            height: 256px;
+            margin: 20px auto;
+            width: 256px;
+        }
+        figure#runner.sprite1 { background-position:    0     0; }
+        figure#runner.sprite2 { background-position: -256px   0; }
+        figure#runner.sprite3 { background-position: -512px   0; }
+        figure#runner.sprite4 { background-position: -768px   0; }
+        figure#runner.sprite5 { background-position: -1024px  0; }
+        figure#runner.sprite6 { background-position: -1280px  0; }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Sprites</h1>
+        </header>
+        <section>
+            <figure id="runner" class="sprite1"></figure>
+        </section>
+    </main>
+    <script>
+        const sp = document.getElementById('runner')
+        var   ct = 1
+        const ns = 6
+        const si = setInterval(() => {
+            console.log(ct)
+            sp.className = ''
+            sp.classList.add('sprite' + ct)
+            if (ct == ns) {
+                ct = 1
+            } else {
+               ct++
+            }
+        }, 80)
+
+    </script>
+</body>
+</html>

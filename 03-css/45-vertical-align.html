@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Align</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        article {
+            border: 2px solid #666;
+            padding: 5px;
+            margin: 5px;
+        }
+        article.va01 img { vertical-align: baseline; }
+        article.va02 img { vertical-align: top; }
+        article.va03 img { vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Vertical Align</h1>
+        </header>
+        <section>
+            <article class="va01">
+                <img src="images/info.svg" width="120px">
+                Baseline
+            </article>
+            <!--  -->
+            <article class="va02">
+                <img src="images/info.svg" width="120px">
+                Top
+            </article>
+            <!--  -->
+            <article class="va03">
+                <img src="images/info.svg" width="120px">
+                Middle
+            </article>
+        </section>
+    </main>
+</body>
+</html>

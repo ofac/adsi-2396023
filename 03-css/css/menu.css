@@ -2,6 +2,7 @@
 body {
     background: url(../images/bg.jpg) no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
     min-height: 100vh;
@@ -34,7 +35,7 @@ nav li a:visited {
     flex-direction: row;
     text-decoration: none;
     align-items: center;
-    padding: 0.4rem;
+    padding: 0.2rem;
     transition: all 0.2s ease-in;
 }
 nav li a i {

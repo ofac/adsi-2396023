@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psudo Classes</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        nav a:link,
+        nav a:visited {
+            background-color: #1e725a;
+            border: none;
+            cursor: pointer;
+            font-family: Poppins;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0px 10px;
+            color: #fff;
+        }
+        nav a:hover {
+            background-color: #1e3a72;
+        }
+        nav a:active {
+            background-color: #721e3d;
+        }
+        p::first-letter {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+        p::first-line {
+            background-color:#55a389;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Psudo Classes</h1>
+        </header>
+        <section>
+            <h2>:link | :visited | :hover | :active</h2>
+            <nav>
+                <a href="#"> Home </a>
+                <a href="#"> Services </a>
+                <a href="#"> Contact </a>
+            </nav>
+            <!--  -->
+            <h2>:first-letter | :first-line </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla earum minima quasi accusamus deleniti, molestiae cupiditate illo dolor perspiciatis, dolores veniam aperiam repudiandae, aliquid itaque dolorem ratione ab hic. Sequi mollitia id illo praesentium illum doloribus et consectetur labore porro.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

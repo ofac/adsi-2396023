@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html {
     scroll-behavior: smooth;
 }
 body {
     background: url(../images/bg.jpg) no-repeat center;
+    background-attachment: fixed;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
