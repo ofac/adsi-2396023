@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
 body {
-    background: url(../imgs/bg.jpg) no-repeat center;
+    background: url(../images/bg.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
@@ -12,8 +12,9 @@ main {
     width: 32rem;
 }
 header h1 {
+    border-radius: 10px;
     background-color: #ffffff66;
-    border-bottom: 4px solid #d47a12;
+    border-bottom: 4px solid #df3e16;
     color: #333;
     padding: 2rem;
     font-weight: 500;
@@ -30,16 +31,18 @@ nav li {
 nav li a:link,
 nav li a:visited {
     background-color: #00000066;
+     border-radius: 10px;
     color: #fff;
     display: flex;
     flex-direction: row;
     text-decoration: none;
     align-items: center;
-    padding: 0.4rem;
+    padding: 0.2rem;
     transition: all 0.2s ease-in;
 }
 nav li a i {
-    background-color: #d47a12;
+    background-color: #ffffffcc;
+    border-radius: 10px;
     color: #00000099;
     padding: 0.6rem;
     font-weight: 500;
@@ -49,12 +52,12 @@ nav li a i {
     text-align: center;
     height: 2rem;
     width: 2rem;
-    transition: all 0.2s 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 nav li a:hover {
-    background-color: #000000aa;
+    background-color: #00000099;
 }
 nav li a:hover i {
-    color: #fff;
-    transform: scale(1.25);
+    color: #df3e16;
+    transform: scale(1.05);
 }

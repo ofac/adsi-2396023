@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html {
     scroll-behavior: smooth;
 }
 body {
-    background: url(../imgs/bg.jpg) no-repeat center;
-    background-size: cover;
+    background: url(../images/bg.jpg) no-repeat center;
     background-attachment: fixed;
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
     min-height: 100vh;
@@ -16,7 +16,8 @@ main {
 }
 header h1 {
     background-color: #ffffff66;
-    border-bottom: 4px solid #d47a12;
+    border-radius: 10px;
+    border-bottom: 4px solid #df3e16;
     color: #333;
     padding: 2rem;
     font-weight: 500;
@@ -25,6 +26,7 @@ header h1 {
 header h1 a:link,
 header h1 a:visited {
     background-color: #00000099;
+    border-radius: 10px;
     color: #fff;
     float: left;
     padding: 0 6px;
@@ -38,7 +40,13 @@ header h1 a:hover {
 }
 section {
     background-color: #ffffffbb;
+    border-radius: 10px;
     color: #333;
     padding: 2rem;
     min-height: 20rem;
+}
+section h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #df3e16;
 }

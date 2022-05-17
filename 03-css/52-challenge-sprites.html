@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Sprites</title>
+    <style>
+		body {
+			background-color: #fff;
+			font-family: Arial;
+		}
+		main.site {
+			background-color: #17a053;
+			margin: 10px auto;
+			padding: 20px;
+		}
+		header {
+			height: 200px;
+		}
+		figure.logo {
+			background: url(images/spriteweb.png) no-repeat -10px -440px;
+			height: 120px;
+			margin: 0px auto;
+			width: 180px;
+		}
+		header menu {
+			margin: 20px auto;
+			padding: 0;
+			width: 920px;
+		}
+		header menu li {
+			background-color: rgba(0,0,0,.4);
+			border-bottom: 6px solid #fff;
+			color: #fff;
+			display: inline-block;
+			list-style: none;
+			padding: 20px;
+			margin: 0px 10px;
+			text-align: center;
+			width: 120px;
+		}
+		header menu li:hover {
+			background-color: rgba(0,0,0,.8);
+			border-bottom: 6px solid #fad000;
+			cursor: pointer;
+		}
+		section.slider {
+			background-color: rgba(0,0,0,.4);
+			height: 220px;
+			margin: 40px auto;
+			padding: 10px;
+			width: 880px;
+		}
+		section.slider div.slide {
+			border: 2px solid #fff;
+			background: url(images/spriteweb.png) no-repeat -500px -18px;
+			display: inline-block;
+			height: 190px;
+			margin: 10px;
+			vertical-align: top;
+			width: 264px;
+		}
+		section.slider div.slide div.info {
+			background-color: rgba(255,255,255,.4);
+			font-weight: bold;
+			font-size: 1.2em;
+			padding: 20px;
+			text-align: center;
+		}
+		section.slider div.slide:hover div.info {
+			background-color: rgba(255,255,255,.8);
+			cursor: pointer;
+		}
+		section.content {
+			background-color: rgba(0,0,0,.4);
+			height: 620px;
+			margin: 40px auto;
+			padding: 10px;
+			width: 880px;
+		}
+		section.content article:nth-child(1) {
+			margin-top: 0px;
+		}
+		section.content article {
+			background-color: #fff;
+			margin: 10px auto;
+			height: 200px;
+			position: relative;
+		}
+		section.content article:hover p {
+			color: #12713c;
+			cursor: pointer;
+		}
+		section.content article div.icon-l {
+			background: url(images/spriteweb.png) no-repeat -300px -500px;
+			height: 80px;
+			position: absolute;
+			top: 56px;
+			left: 50px;
+			width: 80px;
+		}
+		section.content article div.icon-r {
+			background: url(images/spriteweb.png) no-repeat -80px -210px;
+			height: 160px;
+			position: absolute;
+			top: 16px;
+			right: 50px;
+			width: 110px;
+		}
+		section.content article p {
+			color: rgba(0,0,0,.6);
+			height: 100px;
+			position: absolute;
+			top: 0px;
+			left: 180px;
+			line-height: 1.8em;
+			text-align: justify;
+			width: 510px;
+		}
+		footer {
+			background-color: #fff;
+			height: 220px;
+			margin: 10px auto 0px auto;
+			padding: 10px;
+			position: relative;
+			width: 880px;
+		}
+		footer div.products {
+			background: url(images/spriteweb.png) no-repeat -500px -420px;
+			height: 180px;
+			position: absolute;
+			left: 300px;
+			top: 0px;
+			width: 260px;
+		}
+		footer menu {
+			margin: 20px auto;
+			padding: 0;
+			position: absolute;
+			bottom: -10px;
+			width: 920px;
+		}
+		footer menu li {
+			border-bottom: 6px solid #fff;
+			color: rgba(0,0,0,.6);
+			display: inline-block;
+			list-style: none;
+			padding: 10px;
+			margin: 0px 10px;
+			text-align: center;
+			width: 120px;
+		}
+		footer menu li:hover {
+			border-bottom: 6px solid #12713c;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<main class="site">
+		<header>
+			<figure class="logo"></figure>
+			<menu>
+				<li> INICIO </li>
+				<li> NOSOTROS </li>
+				<li> PORTAFOLIO </li>
+				<li> SERVICIOS </li>
+				<li> CONTACTO </li>
+			</menu>
+		</header>
+		<section class="slider">
+			<div class="slide">
+				<div class="info">
+					Sprite 01
+				</div>
+			</div>
+			<div class="slide">
+				<div class="info">
+					Sprite 02
+				</div>
+			</div>
+			<div class="slide">
+				<div class="info">
+					Sprite 03
+				</div>
+			</div>
+		</section>
+		<section class="content">
+			<article>
+				<div class="icon-l"></div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+				</p>
+				<div class="icon-r"></div>
+			</article>
+			<article>
+				<div class="icon-l"></div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+				</p>
+				<div class="icon-r"></div>
+			</article>
+			<article>
+				<div class="icon-l"></div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+				</p>
+				<div class="icon-r"></div>
+			</article>
+		</section>
+		<footer>
+			<div class="products"></div>
+			<menu>
+				<li> INICIO </li>
+				<li> NOSOTROS </li>
+				<li> PORTAFOLIO </li>
+				<li> SERVICIOS </li>
+				<li> CONTACTO </li>
+			</menu>
+		</footer>
+	</main>
+</body>
+</html>
