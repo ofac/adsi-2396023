@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Gradient</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.box {
+            border: 2px dotted #df3e16;
+            height: 240px;
+        } 
+        div.box1 { background: linear-gradient(to top, #95ff72, #325426); }
+        div.box2 { background: linear-gradient(45deg, #f96592, #2c2654);  }
+        div.box3 { background: linear-gradient(to bottom, #cc0 40%, 
+                                                          #00c 40%,
+                                                          #00c 70%, 
+                                                          #c00 70%); 
+        }
+        div.box4 {
+            background: linear-gradient(to right, #000 50%, #fff 0%);
+            background-size: 50px 100px;
+        }
+        div.box5 { background: radial-gradient(circle, #95c4fa, #06346a); }
+        div.box6 {
+            background: radial-gradient(circle, #fff 20%,
+                                                #000 20%,
+                                                #000 40%,
+                                                #fff 40%,
+                                                #fff 60%,
+                                                #000 60%,
+                                                #000 80%,
+                                                #fff 80%,
+                                                #fff 80%);                      
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Background Gradient</h1>
+        </header>
+        <section>
+            <h3>linear-gradient(to top, color1, color2)</h3>
+            <div class="box box1"></div>
+            <!--  -->
+            <h3>linear-gradient(45deg, color1, color2)</h3>
+            <div class="box box2"></div>
+            <!--  -->
+            <h3>Colombia Flag</h3>
+            <div class="box box3"></div>
+            <!--  -->
+            <h3>Vertical Lines</h3>
+            <div class="box box4"></div>
+            <!--  -->
+            <h3>radial-gradient(circle, color1, color2)</h3>
+            <div class="box box5"></div>
+            <!--  -->
+            <h3>Bulleye</h3>
+            <div class="box box6"></div>
+            <!--  -->
+        </section>
+    </main>
+</body>
+</html>
