@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        figure.kirby {
+            background: url(images/kiby.png) no-repeat center /contain;
+            height: 200px;
+            margin: 2.4rem auto;
+            width: 200px;
+        }
+        .transt1 {
+            transition: transform 0.5s ease-in;
+        }
+        .transt1:hover {
+            transform: scale(1.4);
+        }
+        /*  */
+        .transt2 {
+            transition: transform 1s ease-out;
+        }
+        .transt2:hover {
+            transform: rotate(360deg);
+        }
+        /*  */
+        .transt3 {
+            transition: transform 0.5s,
+                        height 0.5s 0.5s;
+        }
+        .transt3:hover {
+            transform: translateX(100px);
+            width: 280px;
+            height: 280px;
+
+        }
+        /*  */
+        .transt4 {
+            transition: all 1s ease-in-out;
+        }
+        .transt4:hover {
+            background-image: url(images/kirby2.png);
+        }
+        /*  */
+        figure.kirby.transt5 {
+            background-image: none;
+            background-color: #df3e16;
+            transition: background-color 1s, width 0.5s 1s;
+        }
+        figure.kirby.transt5:hover {
+            background-color: #427ec3;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Transitions</h1>
+        </header>
+        <section>
+            <h3>transition: transform 0.5s ease-in</h3>
+            <figure class="kirby transt1"></figure>
+            <h3>transition: transform 1s ease-out</h3>
+            <figure class="kirby transt2"></figure>
+            <h3>transition: transform 0.5s, height 0.5s 0.5s</h3>
+            <figure class="kirby transt3"></figure>
+            <h3>transition: all 1s ease-in-out</h3>
+            <figure class="kirby transt4"></figure>
+            <h3>transition: background 1s, width 0.5s 1s</h3>
+            <figure class="kirby transt5"></figure>
+        </section>
+    </main>
+</body>
+</html>

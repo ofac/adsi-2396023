@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        figure.garden {
+            background: url(images/garden.jpg) no-repeat center /cover;
+            height: 400px;
+            margin: 1rem auto;
+            overflow: hidden;
+            position: relative;
+            width: 480px;
+        }
+        figure.garden div.dove {
+            background: url(images/dove.png) no-repeat center /contain;
+            height: 80px;
+            position: absolute;
+            left: -100px;
+            width: 80px;
+            animation: anim-dove 10s linear infinite;
+        }
+        @keyframes anim-dove {
+            0% {
+                left: -100px;
+                top: 0px;
+                transform: rotateY(0deg) scale(2);
+            }
+            50% {
+                left: 280px;
+                top: 300px;
+                transform: rotateY(0deg) scale(0.8);
+            }
+            51% {
+                left: 280px;
+                top: 300px;
+                transform: rotateY(180deg) scale(0.8);
+            }
+            70% {
+                left: 280px;
+                top: 300px;
+                transform: rotateY(180deg) scale(0.8);
+            }
+            100% {
+                left: -400px;
+                top: 200px;
+                transform: rotateY(180deg) scale(8);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Animations</h1>
+        </header>
+        <section>
+            <figure class="garden">
+                <div class="dove"></div>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>

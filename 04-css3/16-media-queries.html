@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        * {
+            transition: all 0.2s ease-in;
+        }
+        body {
+            background-color: #003675;
+            color: #ffffffcc;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+        main {
+            padding: 2rem;
+        }
+        main header figure.logo {
+            background: url(images/pepsi01.png) no-repeat center;
+            margin: 0 auto;
+            width: 919px;
+            height: 354px;
+        } 
+        main p {
+            line-height: 2rem;
+            text-align: justify;
+        }
+        main h1 {
+            font-size: 4rem;
+            text-align: center;
+        }
+        main h1 span.small,
+        main h1 span.medium {
+            display: none;
+        }
+        /* = - = = - = = - = = - = = - = = - = */
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            main header figure.logo {
+                background: url(images/pepsi02.png) no-repeat center;
+                width: 348px;
+                height: 370px;
+            } 
+            main h1 span.small,
+            main h1 span.large {
+                display: none;
+            }
+            main h1 span.medium {
+                display: inline;
+            }
+            main h1 {
+                font-size: 2.8rem;
+            }
+        }
+        @media (max-width: 780px) {
+            main header figure.logo {
+                background: url(images/pepsi03.png) no-repeat center;
+                width: 162px;
+                height: 156px;
+            } 
+            main h1 span.medium,
+            main h1 span.large {
+                display: none;
+            }
+            main h1 span.small {
+                display: inline;
+            }
+            main h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+        </header>
+        <section>
+            <h1>
+                Media Queries 
+                <span class="large">( >1024px )</span>
+                <span class="medium">( < 1024px )</span>
+                <span class="small">(  < 780px )</span>
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum quidem qui suscipit blanditiis dolor sed laudantium impedit ipsum neque, nihil quod debitis minima labore est, voluptatibus voluptas excepturi ex perferendis laboriosam numquam inventore. Nobis rerum provident temporibus recusandae doloribus dolorum accusantium, est minus similique mollitia ratione necessitatibus, quaerat atque dignissimos officia. Amet omnis enim eaque alias veniam itaque tenetur similique facilis. Voluptatibus nisi, ipsam necessitatibus possimus nam perferendis esse non eum sequi! Repellendus quam sunt libero obcaecati ex amet, qui cumque. Id doloremque doloribus sapiente qui atque vero eos aliquam obcaecati delectus. Et facilis in eligendi maxime laboriosam laborum amet non aliquid inventore rem quisquam voluptates fugiat repellendus quos voluptate, voluptatibus fuga ducimus dolores atque quam aperiam provident! Dignissimos nobis velit illum quae suscipit pariatur voluptate. Numquam odio similique, a ad quam beatae asperiores repellat at vel earum perferendis, ratione eum voluptatum ipsam sit dolore saepe nesciunt iusto praesentium veniam, cum reprehenderit rem! Ipsa, eveniet. Ipsam quisquam, ut ipsa repellat perspiciatis dolorum placeat enim ea numquam, nulla voluptate eos sapiente sit magnam saepe harum reprehenderit molestias repudiandae, quis adipisci. Aspernatur, numquam fuga dicta porro in et modi! Commodi dicta et doloribus impedit? Fugiat fuga itaque totam et enim magnam!
+            </p>
+        </section>
+    </main>
+</body>
+</html>
