@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        * {
+            transition: all 0.5s ease-in;
+        }
+        button {
+            background: #1061b7;
+            border: none;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 0.9em;
+            padding: 8px 0px;
+            width: 120px;
+        }
+        button:hover {
+            background: #0a3e76;
+            cursor: pointer;
+        }
+
+        div.demo {
+            box-sizing: border-box;
+            border: 2px solid #1061b7;
+            min-height: 275px;
+            padding: .5rem;
+        }
+        div.demo div.parent {
+            position: relative;
+            grid-auto-columns: 1fr;
+            overflow: hidden;
+            border: 1px dashed #1061b7;
+        }
+        div.demo div.parent2,
+        div.demo div.parent3,
+        div.demo div.parent4,
+        div.demo div.parent5,
+        div.demo div.parent6,
+        div.demo div.parent7,
+        div.demo div.parent8,
+        div.demo div.parent9,
+        div.demo div.parent10,
+        div.demo div.parent11,
+        div.demo div.parent12 {
+            display: flex;
+            height: 250px;
+        }
+        div.demo div.parent3 {
+            align-items: flex-start;
+        }
+        div.demo div.parent9,
+        div.demo div.parent12 {
+            flex-wrap: wrap;
+        }
+        div.demo div.parent3 .child,
+        div.demo div.parent4 .child,
+        div.demo div.parent9 .child {
+            width: 40%;
+        }
+        div.demo div.parent4 .child {
+            height: 40%;
+        }
+        div.demo div.parent11 .child {
+            width: 45%;
+        }
+        div.demo div.parent.parent5 .child-active,
+        div.demo div.parent.parent8 .child-active,
+        div.demo div.parent.parent10 .child-active,
+        div.demo div.parent.parent11 .child-active,
+        div.demo div.parent.parent12 .child-active {
+            background-color: #1061b7;
+            color: #fff;
+        }
+        /* - - - */
+        .d-f  { display: flex; }
+        .d-if { display: inline-flex; }
+        /* - - - */
+        .fd-r  { flex-direction: row; }
+        .fd-rr { flex-direction: row-reverse; }
+        .fd-c  { flex-direction: column; }
+        .fd-cr { flex-direction: column-reverse; }
+        /* - - -  */
+        .fw-nw  { flex-wrap: nowrap; }
+        .fw-w   { flex-wrap: wrap; }
+        .fw-wr  { flex-wrap: wrap-reverse; }
+        /* - - -  */
+        .ff-rn  { flex-flow: row nowrap; }
+        .ff-cr  { flex-flow: column-reverse; }
+        .ff-cw  { flex-flow: column wrap; }
+        .ff-rr  { flex-flow: row-reverse wrap-reverse; }
+        /* - - -  */
+        .o-n1  { order: -1; }
+        .o-p0  { order: 0; }
+        .o-p1  { order: 1; }
+        /* - - -  */
+        .jc-fs  { justify-content: flex-start; }
+        .jc-fe  { justify-content: flex-end; }
+        .jc-c   { justify-content: center; }
+        .jc-sb  { justify-content: space-between; }
+        .jc-sa  { justify-content: space-around; }
+        .jc-se  { justify-content: space-evenly; }
+        /* - - -  */
+        .ai-s   { align-items: stretch; }
+        .ai-fs  { align-items: flex-start; }
+        .ai-fe  { align-items: flex-end; }
+        .ai-c   { align-items: center; }
+        .ai-b   { align-items: baseline; }
+        .ai-a   { align-items: auto; }
+        /* - - -  */
+        .as-a   { align-self: auto; }
+        .as-s   { align-self: stretch; }
+        .as-fs  { align-self: flex-start; }
+        .as-fe  { align-self: flex-end; }
+        .as-c   { align-self: center; }
+        .as-b   { align-self: baseline; }
+        /* - - -  */
+        .ac-fs  { align-content: flex-start; }
+        .ac-fe  { align-content: flex-end; }
+        .ac-c   { align-content: center; }
+        .ac-sb  { align-content: space-between; }
+        .ac-sa  { align-content: space-around; }
+        .ac-s   { align-content: stretch; }
+        /* - - -  */
+        .fg-0   { flex-grow: 0; }
+        .fg-1   { flex-grow: 1; }
+        /* - - -  */
+        .fs-1   { flex-shrink: 1; }
+        .fs-0   { flex-shrink: 0; }
+        /* - - -  */
+        .fb-30  { flex-basis: 30%; }
+        .fb-50  { flex-basis: 50%; }
+        .fb-c   { flex-basis: content; }
+        .fb-a   { flex-basis: auto; }
+        /* - - -  */
+
+
+        div.demo div.parent div.child {
+            background-color: #78a7d9;
+            box-sizing: border-box;
+            border: 1px solid #1061b7;
+            color: #1061b7;
+            font-size: 2em;
+            min-width: 2.5rem;
+            min-height: 2.5rem;
+            padding: .5rem;
+            position: relative;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> FlexBox</h1>
+        </header>
+        <section>
+            <h2>Flex Containers</h2>
+        <h3>display</h3>
+        <button id="d-f">flex</button>
+        <button id="d-if">inline-flex</button>
+        <div class="demo">
+            Some text
+            <div class="parent d-f">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h2>Ordering & Orientation </h2>
+        <h3>flex-direction</h3>
+        <button id="fd-r">row</button>
+        <button id="fd-rr">row-reverse</button>
+        <button id="fd-c">column</button>
+        <button id="fd-cr">column-reverse</button>
+        <div class="demo">
+            <div class="parent parent2 fd-r">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>flex-wrap</h3>
+        <button id="fw-nw">nowrap</button>
+        <button id="fw-w">wrap</button>
+        <button id="fw-wr">wrap-reverse</button>
+        <div class="demo">
+            <div class="parent parent3 fw-nw">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>flex-flow</h3>
+        <button id="ff-rn">row nowrap</button>
+        <button id="ff-cr">column-reverse</button>
+        <button id="ff-cw">column wrap</button>
+        <button id="ff-rr">row-reverse w-r</button>
+        <div class="demo">
+            <div class="parent parent4 ff-rn">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>order</h3>
+        <button id="o-n1">-1</button>
+        <button id="o-p0">0</button>
+        <button id="o-p1">1</button>
+        <div class="demo">
+            <div class="parent parent5">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child child-active o-n1">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h2>Alignment </h2>
+        <h3>justify-content</h3>
+        <button id="jc-fs">flex-start</button>
+        <button id="jc-fe">flex-end</button>
+        <button id="jc-c">center</button>
+        <button id="jc-sb">space-between</button>
+        <button id="jc-sa">space-around</button>
+        <button id="jc-se">space-evenly</button>
+        <div class="demo">
+            <div class="parent parent6 jc-fs">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>align-items</h3>
+        <button id="ai-s">stretch</button>
+        <button id="ai-fs">flex-start</button>
+        <button id="ai-fe">flex-end</button>
+        <button id="ai-c">center</button>
+        <button id="ai-b">baseline</button>
+        <button id="ai-a">auto</button>
+        <div class="demo">
+            <div class="parent parent7 ai-s">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>align-self</h3>
+        <button id="as-a">auto</button>
+        <button id="as-s">stretch</button>
+        <button id="as-fs">flex-start</button>
+        <button id="as-fe">flex-end</button>
+        <button id="as-c">center</button>
+        <button id="as-b">baseline</button>
+        <div class="demo">
+            <div class="parent parent8">
+                <div class="child">1</div>
+                <div class="child child-active as-a">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>align-content</h3>
+        <button id="ac-fs">flex-start</button>
+        <button id="ac-fe">flex-end</button>
+        <button id="ac-c">center</button>
+        <button id="ac-sb">space-between</button>
+        <button id="ac-sa">space-around</button>
+        <button id="ac-s">stretch</button>
+        <div class="demo">
+            <div class="parent parent9 ac-fs">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h2>Flexibility </h2>
+        <h3>flex-grow</h3>
+        <button id="fg-0">0</button>
+        <button id="fg-1">1</button>
+        <div class="demo">
+            <div class="parent parent10">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child child-active fg-0">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>flex-shrink</h3>
+        <button id="fs-1">1</button>
+        <button id="fs-0">0</button>
+        <div class="demo">
+            <div class="parent parent11">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child child-active fs-1">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        <!-- - - - -->
+        <h3>flex-basis</h3>
+        <button id="fb-30">30%</button>
+        <button id="fb-50">50%</button>
+        <button id="fb-c">content</button>
+        <button id="fb-a">auto</button>
+        <div class="demo">
+            <div class="parent parent12">
+                <div class="child">1</div>
+                <div class="child">2</div>
+                <div class="child child-active fb-30">3</div>
+                <div class="child">4</div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <script>
+        let bts     = document.getElementsByTagName('button'); 
+        let parent  = document.getElementsByClassName('parent');
+        let actives = document.getElementsByClassName('child-active');
+
+        for (let i = 0; i < bts.length; i++) {
+            bts[i].onclick = function() {
+                //alert(this.getAttribute('id'));
+                let vid = this.getAttribute('id');
+                changeClasses(vid);
+            }
+        }
+
+        function changeClasses(vid) {
+            switch (vid) {
+                case 'd-f':
+                    parent[0].classList.remove('d-if');
+                    parent[0].classList.add('d-f');
+                    break;
+                case 'd-if':
+                    parent[0].classList.remove('d-f');
+                    parent[0].classList.add('d-if');
+                    break;
+                /* - - - */
+                case 'fd-r':
+                    parent[1].classList.remove('fd-rr');
+                    parent[1].classList.remove('fd-c');
+                    parent[1].classList.remove('fd-cr');
+                    parent[1].classList.add('fd-r');
+                    break;
+                case 'fd-rr':
+                    parent[1].classList.remove('fd-r');
+                    parent[1].classList.remove('fd-c');
+                    parent[1].classList.remove('fd-cr');
+                    parent[1].classList.add('fd-rr');
+                    break;
+                case 'fd-c':
+                    parent[1].classList.remove('fd-r');
+                    parent[1].classList.remove('fd-rr');
+                    parent[1].classList.remove('fd-cr');
+                    parent[1].classList.add('fd-c');
+                    break;
+                case 'fd-cr':
+                    parent[1].classList.remove('fd-r');
+                    parent[1].classList.remove('fd-rr');
+                    parent[1].classList.remove('fd-c');
+                    parent[1].classList.add('fd-cr');
+                    break;
+                    /* - - - */
+                    case 'fw-nw':
+                        parent[2].classList.remove('fw-w');
+                        parent[2].classList.remove('fw-wr');
+                        parent[2].classList.add('fw-nw');
+                        break;
+                    case 'fw-w':
+                        parent[2].classList.remove('fw-nw');
+                        parent[2].classList.remove('fw-wr');
+                        parent[2].classList.add('fw-w');
+                        break;
+                    case 'fw-wr':
+                        parent[2].classList.remove('fw-nw');
+                        parent[2].classList.remove('fw-w');
+                        parent[2].classList.add('fw-wr');
+                        break;
+                     /* - - - */
+                    case 'ff-rn':
+                        parent[3].classList.remove('ff-cr');
+                        parent[3].classList.remove('ff-cw');
+                        parent[3].classList.remove('ff-rr');
+                        parent[3].classList.add('ff-rn');
+                        break;
+                    case 'ff-cr':
+                        parent[3].classList.remove('ff-rn');
+                        parent[3].classList.remove('ff-cw');
+                        parent[3].classList.remove('ff-rr');
+                        parent[3].classList.add('ff-cr');
+                        break;
+                    case 'ff-cw':
+                        parent[3].classList.remove('ff-rn');
+                        parent[3].classList.remove('ff-cr');
+                        parent[3].classList.remove('ff-rr');
+                        parent[3].classList.add('ff-cw');
+                        break;
+                    case 'ff-rr':
+                        parent[3].classList.remove('ff-rn');
+                        parent[3].classList.remove('ff-cr');
+                        parent[3].classList.remove('ff-cw');
+                        parent[3].classList.add('ff-rr');
+                        break;
+                     /* - - - */
+                    case 'o-n1':
+                        actives[0].classList.remove('o-p0');
+                        actives[0].classList.remove('o-p1');
+                        actives[0].classList.add('o-n1');
+                        break;
+                    case 'o-p0':
+                        actives[0].classList.remove('o-n1');
+                        actives[0].classList.remove('o-p1');
+                        actives[0].classList.add('o-p0');
+                        break;
+                    case 'o-p1':
+                        actives[0].classList.remove('o-n1');
+                        actives[0].classList.remove('o-p0');
+                        actives[0].classList.add('o-p1');
+                        break;
+                     /* - - - */
+                    case 'jc-fs':
+                        parent[5].classList.remove('jc-fe');
+                        parent[5].classList.remove('jc-c');
+                        parent[5].classList.remove('jc-sb');
+                        parent[5].classList.remove('jc-sa');
+                        parent[5].classList.remove('jc-se');
+                        parent[5].classList.add('jc-fs');
+                        break;
+                    case 'jc-fe':
+                        parent[5].classList.remove('jc-fs');
+                        parent[5].classList.remove('jc-c');
+                        parent[5].classList.remove('jc-sb');
+                        parent[5].classList.remove('jc-sa');
+                        parent[5].classList.remove('jc-se');
+                        parent[5].classList.add('jc-fe');
+                        break;
+                    case 'jc-c':
+                        parent[5].classList.remove('jc-fs');
+                        parent[5].classList.remove('jc-fe');
+                        parent[5].classList.remove('jc-sb');
+                        parent[5].classList.remove('jc-sa');
+                        parent[5].classList.remove('jc-se');
+                        parent[5].classList.add('jc-c');
+                        break;
+                    case 'jc-sb':
+                        parent[5].classList.remove('jc-fs');
+                        parent[5].classList.remove('jc-fe');
+                        parent[5].classList.remove('jc-c');
+                        parent[5].classList.remove('jc-sa');
+                        parent[5].classList.remove('jc-se');
+                        parent[5].classList.add('jc-sb');
+                        break;
+                    case 'jc-sa':
+                        parent[5].classList.remove('jc-fs');
+                        parent[5].classList.remove('jc-fe');
+                        parent[5].classList.remove('jc-c');
+                        parent[5].classList.remove('jc-sb');
+                        parent[5].classList.remove('jc-se');
+                        parent[5].classList.add('jc-sa');
+                        break;
+                    case 'jc-se':
+                        parent[5].classList.remove('jc-fs');
+                        parent[5].classList.remove('jc-fe');
+                        parent[5].classList.remove('jc-c');
+                        parent[5].classList.remove('jc-sb');
+                        parent[5].classList.remove('jc-sa');
+                        parent[5].classList.add('jc-se');
+                        break;
+                     /* - - - */
+                    case 'ai-s':
+                        parent[6].classList.remove('ai-fs');
+                        parent[6].classList.remove('ai-fe');
+                        parent[6].classList.remove('ai-c');
+                        parent[6].classList.remove('ai-b');
+                        parent[6].classList.remove('ai-a');
+                        parent[6].classList.add('ai-s');
+                        break;
+                    case 'ai-fs':
+                        parent[6].classList.remove('ai-s');
+                        parent[6].classList.remove('ai-fe');
+                        parent[6].classList.remove('ai-c');
+                        parent[6].classList.remove('ai-b');
+                        parent[6].classList.remove('ai-a');
+                        parent[6].classList.add('ai-fs');
+                        break;
+                    case 'ai-fe':
+                        parent[6].classList.remove('ai-s');
+                        parent[6].classList.remove('ai-fs');
+                        parent[6].classList.remove('ai-c');
+                        parent[6].classList.remove('ai-b');
+                        parent[6].classList.remove('ai-a');
+                        parent[6].classList.add('ai-fe');
+                        break;
+                    case 'ai-c':
+                        parent[6].classList.remove('ai-s');
+                        parent[6].classList.remove('ai-fs');
+                        parent[6].classList.remove('ai-fe');
+                        parent[6].classList.remove('ai-b');
+                        parent[6].classList.remove('ai-a');
+                        parent[6].classList.add('ai-c');
+                        break;
+                    case 'ai-b':
+                        parent[6].classList.remove('ai-s');
+                        parent[6].classList.remove('ai-fs');
+                        parent[6].classList.remove('ai-fe');
+                        parent[6].classList.remove('ai-c');
+                        parent[6].classList.remove('ai-a');
+                        parent[6].classList.add('ai-b');
+                        break;
+                    case 'ai-a':
+                        parent[6].classList.remove('ai-s');
+                        parent[6].classList.remove('ai-fs');
+                        parent[6].classList.remove('ai-fe');
+                        parent[6].classList.remove('ai-c');
+                        parent[6].classList.remove('ai-b');
+                        parent[6].classList.add('ai-a');
+                        break;
+                     /* - - - */
+                    case 'ai-s':
+                        actives[1].classList.remove('as-fs');
+                        actives[1].classList.remove('as-fe');
+                        actives[1].classList.remove('as-c');
+                        actives[1].classList.remove('as-b');
+                        actives[1].classList.remove('as-a');
+                        actives[1].classList.add('as-s');
+                        break;
+                    case 'as-fs':
+                        actives[1].classList.remove('as-s');
+                        actives[1].classList.remove('as-fe');
+                        actives[1].classList.remove('as-c');
+                        actives[1].classList.remove('as-b');
+                        actives[1].classList.remove('as-a');
+                        actives[1].classList.add('as-fs');
+                        break;
+                    case 'as-fe':
+                        actives[1].classList.remove('as-s');
+                        actives[1].classList.remove('as-fs');
+                        actives[1].classList.remove('as-c');
+                        actives[1].classList.remove('as-b');
+                        actives[1].classList.remove('as-a');
+                        actives[1].classList.add('as-fe');
+                        break;
+                    case 'as-c':
+                        actives[1].classList.remove('as-s');
+                        actives[1].classList.remove('as-fs');
+                        actives[1].classList.remove('as-fe');
+                        actives[1].classList.remove('as-b');
+                        actives[1].classList.remove('as-a');
+                        actives[1].classList.add('as-c');
+                        break;
+                    case 'as-b':
+                        actives[1].classList.remove('as-s');
+                        actives[1].classList.remove('as-fs');
+                        actives[1].classList.remove('as-fe');
+                        actives[1].classList.remove('as-c');
+                        actives[1].classList.remove('as-a');
+                        actives[1].classList.add('as-b');
+                        break;
+                    case 'as-a':
+                        actives[1].classList.remove('as-s');
+                        actives[1].classList.remove('as-fs');
+                        actives[1].classList.remove('as-fe');
+                        actives[1].classList.remove('as-c');
+                        actives[1].classList.remove('as-b');
+                        actives[1].classList.add('as-a');
+                        break;
+                     /* - - - */
+                    case 'ac-fs':
+                        parent[8].classList.remove('ac-fe');
+                        parent[8].classList.remove('ac-c');
+                        parent[8].classList.remove('ac-sb');
+                        parent[8].classList.remove('ac-sa');
+                        parent[8].classList.remove('ac-s');
+                        parent[8].classList.add('ac-fs');
+                        break;
+                    case 'ac-fe':
+                        parent[8].classList.remove('ac-fs');
+                        parent[8].classList.remove('ac-c');
+                        parent[8].classList.remove('ac-sb');
+                        parent[8].classList.remove('ac-sa');
+                        parent[8].classList.remove('ac-s');
+                        parent[8].classList.add('ac-fe');
+                        break;
+                    case 'ac-c':
+                        parent[8].classList.remove('ac-fs');
+                        parent[8].classList.remove('ac-fe');
+                        parent[8].classList.remove('ac-sb');
+                        parent[8].classList.remove('ac-sa');
+                        parent[8].classList.remove('ac-s');
+                        parent[8].classList.add('ac-c');
+                        break;
+                    case 'ac-sb':
+                        parent[8].classList.remove('ac-fs');
+                        parent[8].classList.remove('ac-fe');
+                        parent[8].classList.remove('ac-c');
+                        parent[8].classList.remove('ac-sa');
+                        parent[8].classList.remove('ac-s');
+                        parent[8].classList.add('ac-sb');
+                        break;
+                    case 'ac-sa':
+                        parent[8].classList.remove('ac-fs');
+                        parent[8].classList.remove('ac-fe');
+                        parent[8].classList.remove('ac-c');
+                        parent[8].classList.remove('ac-sb');
+                        parent[8].classList.remove('ac-s');
+                        parent[8].classList.add('ac-sa');
+                        break;
+                    case 'ac-s':
+                        parent[8].classList.remove('ac-fs');
+                        parent[8].classList.remove('ac-fe');
+                        parent[8].classList.remove('ac-c');
+                        parent[8].classList.remove('ac-sb');
+                        parent[8].classList.remove('ac-sa');
+                        parent[8].classList.add('ac-s');
+                        break;
+                     /* - - - */
+                     case 'fg-0':
+                        actives[2].classList.remove('fg-1');
+                        actives[2].classList.add('fg-0');
+                        break;
+                    case 'fg-1':
+                        actives[2].classList.remove('fg-0');
+                        actives[2].classList.add('fg-1');
+                        break;
+                     /* - - - */
+                     case 'fs-1':
+                        actives[3].classList.remove('fs-0');
+                        actives[3].classList.add('fs-1');
+                        break;
+                    case 'fs-0':
+                        actives[3].classList.remove('fs-1');
+                        actives[3].classList.add('fs-0');
+                        break;
+                     /* - - - */
+                    case 'fb-30':
+                        actives[4].classList.remove('fb-50');
+                        actives[4].classList.remove('fb-c');
+                        actives[4].classList.remove('fb-a');
+                        actives[4].classList.add('fb-30');
+                        break;
+                    case 'fb-50':
+                        actives[4].classList.remove('fb-30');
+                        actives[4].classList.remove('fb-c');
+                        actives[4].classList.remove('fb-a');
+                        actives[4].classList.add('fb-50');
+                        break;
+                    case 'fb-c':
+                        actives[4].classList.remove('fb-30');
+                        actives[4].classList.remove('fb-50');
+                        actives[4].classList.remove('fb-a');
+                        actives[4].classList.add('fb-c');
+                        break;
+                    case 'fb-a':
+                        actives[4].classList.remove('fb-30');
+                        actives[4].classList.remove('fb-50');
+                        actives[4].classList.remove('fb-c');
+                        actives[4].classList.add('fb-a');
+                        break;
+                     /* - - - */
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+		.wrapper {
+			display: grid;
+			grid-template-columns: 1fr 5fr 2fr;
+			grid-template-rows: 5fr 20fr 5fr;
+			grid-gap: 10px;
+			height: 720px;
+		}
+
+		header {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		footer {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		.wrapper * {
+			background: #107ab7;
+            color: #fff;
+            font-family: Arial;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1px;
+			margin-right: 1px;
+		}
+	</style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html"> ⇠ </a> Grids</h1>
+        </header>
+        <section>
+            <div class="wrapper">
+                <header class="items">HEADER</header>
+                <nav class="items">NAV</nav>
+                <div class="items contents">CONTENTS</div>
+                <aside class="items">ASIDE</aside>
+                <footer class="items">FOOTER</footer>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
