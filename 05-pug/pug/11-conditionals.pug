@@ -1,0 +1,16 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Conditionals
+	body
+		h1 Conditionals
+		- var auth = false
+		article
+			if auth
+				h3 Authorized
+				img(src="imgs/success.png")
+			else
+				h3 Not authorized
+				img(src="imgs/fail.png")
+	

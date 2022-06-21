@@ -1,0 +1,48 @@
+$bg-color-menu: #d94d9b
+$bg-color-hover: #742d56
+
+$width-menu: 742px
+$width-submenu: 160px
+
+section.content
+	margin: 100px auto
+	padding: 20px
+	nav.menu
+		margin: 0px
+		padding: 0px
+		ul
+			list-style: none
+			margin: 0px auto
+			padding: 10px
+			width: $width-menu
+			li
+				background-color: $bg-color-menu
+				color: #fff
+				display: inline-block
+				padding: 10px
+				position: relative
+				text-align: center
+				transition: all 0.5s ease-in
+				width: $width-submenu
+				&:hover
+					color: #fff
+					background-color: $bg-color-hover
+					cursor: pointer
+				ul.submenu
+					//display: none
+					left: -10px
+					opacity: 0
+					position: absolute
+					top: 40px
+					transition: all 0.5s ease-out
+					transform: translateY(-20px)
+					width: 180px
+				&:hover ul.submenu
+					//display: block
+					transform: translateY(-10px)
+					opacity: 1
+					li
+						display: block
+						margin: 4px 0px
+						&:hover
+							background-color: $bg-color-hover

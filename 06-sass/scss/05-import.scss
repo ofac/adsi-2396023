@@ -1,0 +1,16 @@
+@import "filters";
+
+section.content {
+	text-align: center;
+	figure {
+		background: #fff url(../imgs/inosuke.jpg) no-repeat center;
+		background-size: cover;
+		border: 2px solid #d94d9b;
+		border-radius: 110px;
+		display: inline-block;
+		height: 200px;
+		margin: 10px;
+		padding: 0px;
+		width: 200px;
+	}
+}

@@ -1,0 +1,42 @@
+article
+	border: 4px solid #742d56
+	display: inline-block
+	height: 440px
+	margin: 2px
+	overflow: hidden
+	width: calc(960px / 3.2)
+	figure
+		background: url(../imgs/rengoku.jpg) no-repeat center top
+		background-size: 140%
+		height: 440px
+		margin: 0px
+		padding: 0px
+		position: relative
+		transition: all 0.5s ease-in-out
+		div
+			background-color: rgba(0,0,0,.8)
+			top: -100px
+			padding: 20px 0px
+			position: absolute
+			transition: all 0.6s 0.2s ease-in
+			text-align: center
+			width: calc(960px / 3.2)
+			button
+				border: 1px solid #d94d9b
+				border-radius: 20px
+				background-color: #000
+				color: #d94d9b
+				font-size: 1em
+				padding: 10px
+				width: 120px
+				&:hover
+					cursor: pointer
+					background-color: #d94d9b
+					border: 1px solid #000
+					color: #000
+
+	&:hover figure
+		cursor: pointer
+		background-size: 100%
+	&:hover figure div
+		top: 0px

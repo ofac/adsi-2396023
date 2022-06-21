@@ -1,0 +1,96 @@
+body {
+	h1 {
+		font-size: 3em;
+		background: linear-gradient(to top, #333 30%, #d94d9b);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin: 40px auto;
+		text-align: center;
+		width: 580px;
+	}
+
+	a:link.btn,
+	a:visited.btn {
+		border: 1px solid #d94d9b;
+		border-radius: 4px;
+		color: #d94d9b; 
+		display: block;
+		padding: 12px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all 0.5s ease;
+		width: 120px;
+		margin: 80px auto;
+		&:hover {
+			transform: translateY(-10px) scale(1.1);
+		}
+	}
+}
+div.modal {
+	background-color: rgba(0,0,0,.8);
+	bottom: 0px;
+	left: 0px;
+	opacity: 0;
+	position: fixed;
+	pointer-events: none;
+	right: 0px;
+	top: 0px;
+	transition: all 0.5s ease;
+	transform: translateY(-1000px);
+	z-index: 9999;
+
+	&:target {
+		opacity: 1;
+		pointer-events: auto;
+		transform: translateY(0px);
+	}
+	> div {
+		background-color: rgba(255,255,255,.8);
+		box-shadow: 0px 0px 12px rgba(0,0,0,.6);
+		border-radius: 4px; 
+		padding: 20px;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translateY(-45%);
+		transform: translateX(-50%);
+		width: 400px;
+
+		// - - - - - - - - - - - - - - - - - - -
+		// Condicionales 
+		$age: 34;
+		@if $age >= 18 {
+			h2.message {
+				color: #439d27;
+				border-bottom: 2px solid #439d27;
+				position: relative;
+				&:after {
+					content: "Yes, You Can Vote";
+				}
+			}
+		} @else {
+			h2.message {
+				color: #d71f33;
+				border-bottom: 2px solid #d71f33;
+				position: relative;
+				&:after {
+					content: "Can't Vote";
+				}
+			}
+		}
+		//color: rgba(0,0,0,.6);
+		// - - - - - - - - - - - - - - - - - - -
+
+		a:link,
+		a:visited {
+			font-size: 2em;
+			display: block;
+			text-decoration: none;
+			color: #742d56;
+			position: absolute;
+			top: 0px;
+			right: 10px;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Cases
+	body
+		h1 Cases
+		- var friends = 8
+		case friends
+			when 0
+				h4 You don't have friends
+			when 1
+				h4 You have a friend
+			when 2
+			when 3
+			when 4
+				h4 You have few friends
+			default
+				h4 You have #{friends} friends
+	

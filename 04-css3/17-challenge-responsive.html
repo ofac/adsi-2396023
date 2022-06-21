@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Responsive Design (Media Queries)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+		* {
+			transition: all 0.5s ease;
+		}
+		body {
+            font-family: 'Poppins', sans-serif;
+		}
+		main {
+			margin: 0px auto;
+			width: 1280px;
+		}
+		header div.logo {
+			background: url(images/opm-logo.png) no-repeat center;
+			background-size: cover;
+			height: 280px;
+		}
+		section.boxes {
+			margin-top: 40px;
+		}
+		section.boxes div {
+			display: inline-block;
+			height: 280px;
+			margin-right: 28px;
+			position: relative;
+			width: 280px;
+		}
+		section.boxes div:first-child {
+			margin-left: 28px;
+		}
+		section.boxes div:last-child {
+			margin-right: 0px;
+		}
+		section.boxes div:nth-child(1n) {
+			background: url(images/opm1.jpg) no-repeat center;
+			background-size: cover;
+		}
+		section.boxes div:nth-child(2n) {
+			background: url(images/opm2.jpg) no-repeat center;
+			background-size: cover;
+		}
+		section.boxes div p {
+			background-color: rgba(0, 0, 0, .6);
+			color: rgba(255,255,255, .8);
+			bottom: 0px;
+			font-size: 1.4rem;
+			height: 20px;
+			margin: 0px;
+			padding: 20px;
+			position: absolute;
+			text-align: center;
+			width: 240px;
+			transition: all 0.4s;
+		}
+		section.boxes div:hover {
+			cursor: pointer;
+		}
+		section.boxes div:hover p {
+			height: 60px;
+		}
+		footer {
+			margin-top: 40px;
+		}
+		footer article {
+			border: 1px dashed rgba(0,0,0,.2);
+			height: 280px;
+			position: relative;
+			margin: 50px 28px;
+		}
+		footer article figure {
+			background: url(images/opm3.jpg) no-repeat;
+			background-size: cover;
+			height: 280px;
+			margin: 0px;
+			width: 280px;
+		}
+		footer article.art1 figure {
+			background-position: right center;
+		}
+		footer article figure,
+		footer article div {
+			display: inline-block;
+			vertical-align: top;
+		}
+		footer article div {
+			margin-left: 28px;
+			width: 600px;
+		}
+		footer article div h2 {
+			color: rgba(0,0,0,.8);
+			font-size: 2rem;
+			margin: 20px 0px;
+		}
+		footer article div p {
+			color: rgba(0,0,0,.5);
+			line-height: 1.4em;
+			text-align: justify;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 1290px) {
+			main {
+				width: 680px;
+			}
+			header div.logo {
+				background-size: 120%;
+			}
+			section.boxes div {
+				margin: 28px;
+			}
+			footer article div {
+				width: 280px;
+			}
+			footer article div h2 {
+				font-size: 1.4rem;
+			}
+			footer article div p {
+				overflow: scroll;
+				height: 180px;
+			}
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 690px) {
+			main {
+				width: 480px;
+			}
+			section.boxes div {
+				display: block;
+				margin: 28px auto !important;
+                width: 90%;
+                height: 340px;
+			}
+            section.boxes div p {
+                height: 20px;
+                width: 392px;
+            }
+			footer article {
+				height: 560px;
+				margin: 40px auto;
+				width: 90%;
+			}
+            footer article figure {
+                background-size: 180%;
+            }
+			footer article figure,
+			footer article div {
+				display: block;
+                width: 100%;
+			}
+			footer article div {
+				margin-left: 0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<div class="logo"></div>
+		</header>
+		<section class="boxes">
+			<div class="box1">
+				<p>OPM <small>(season 1)</small></p>
+			</div>
+			<div class="box2">
+				<p>OPM <small>(season 2)</small></p>
+			</div>
+			<div class="box3">
+				<p>OPM <small>(season 3)</small></p>
+			</div>
+			<div class="box4">
+				<p>OPM <small>(season 4)</small></p>
+			</div>
+		</section>
+		<footer>
+			<article class="art1">
+				<figure></figure>
+				<div class="content">
+					<h2> SAITAMA SENSEI </h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quam reprehenderit beatae explicabo porro excepturi sunt, totam obcaecati culpa nisi quasi qui earum sint nam. Incidunt repellat sequi recusandae non dolorem, dolor ex minus eius ad veritatis earum, dicta vitae odit laudantium saepe hic et quam nobis maxime quod maiores fugit laboriosam magni amet. Labore laudantium dignissimos, laboriosam quisquam sequi beatae itaque officia quos praesentium distinctio doloremque, aut quae ex, veniam sit eaque accusamus.
+					</p>
+				</div>
+			</article>
+			<article class="art2">
+				<figure></figure>
+				<div class="content">
+					<h2> GENOS </h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quam reprehenderit beatae explicabo porro excepturi sunt, totam obcaecati culpa nisi quasi qui earum sint nam. Incidunt repellat sequi recusandae non dolorem, dolor ex minus eius ad veritatis earum, dicta vitae odit laudantium saepe hic et quam nobis maxime quod maiores fugit laboriosam magni amet. Labore laudantium dignissimos, laboriosam quisquam sequi beatae itaque officia quos praesentium distinctio doloremque, aut quae ex, veniam sit eaque accusamus.
+					</p>
+				</div>
+			</article>
+		</footer>
+	</main>
+</body>
+</html>
