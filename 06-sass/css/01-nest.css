@@ -1,0 +1,30 @@
+body main section.content h2:after {
+  background: linear-gradient(to right, #fff, #d94d9b);
+  content: "";
+  height: 10px;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) skew(-50deg);
+  top: calc(100% + 10px);
+  width: 80%;
+}
+body main section.content h2 {
+  border-bottom: none;
+  color: #d94d9b;
+  font-size: 2.4em;
+  margin: 150px 0px;
+  position: relative;
+  text-align: center;
+}
+body main section.content h2:before {
+  background: linear-gradient(to right, #d94d9b, #fff);
+  content: "";
+  height: 10px;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) skew(-50deg);
+  top: calc(-100% + 20px);
+  width: 80%;
+}

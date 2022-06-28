@@ -1,0 +1,9 @@
+section.content {
+  /* This is a block comment,
+  * and it is visible in the CSS. */ 
+}
+section.content p {
+  line-height: 1.6em;
+  word-spacing: 0.6em;
+  text-align: justify;
+}

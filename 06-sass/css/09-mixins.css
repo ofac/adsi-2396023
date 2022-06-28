@@ -1,0 +1,79 @@
+body main {
+  width: 1056px;
+}
+body main figure {
+  display: inline-block;
+  height: 280px;
+  margin: 0px 8px;
+  width: 320px;
+}
+body main figure.day {
+  background: url(../images/day.png) no-repeat center;
+  background-size: cover;
+}
+body main figure.day:nth-of-type(1) {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: #000251;
+  box-shadow: 0px 0px 8px #333;
+}
+body main figure.day:nth-of-type(2) {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #005130;
+  box-shadow: 0px 4px 8px #666;
+}
+body main figure.day:nth-of-type(3) {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #541234;
+  box-shadow: 4px 0px 8px #999;
+}
+body main figure div {
+  background: url(../images/night.png) no-repeat center;
+  background-size: cover;
+  height: 100%;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+body main figure:nth-of-type(1) div {
+  -webkit-clip-path: polygon(49% 100%, 98% 100%, 50% 100%, 0 100%);
+}
+body main figure:nth-of-type(2) div {
+  -webkit-clip-path: polygon(0% 20%, 0 20%, 0 20%, 0 47%, 0 79%, 0 79%, 0% 80%);
+}
+body main figure:nth-of-type(3) div {
+  -webkit-clip-path: circle(0% at 50% 50%);
+}
+body main figure:nth-of-type(1):hover div {
+  animation: 1s animClip1 ease 1 forwards;
+}
+body main figure:nth-of-type(2):hover div {
+  animation: 1s animClip2 ease 1 forwards;
+}
+body main figure:nth-of-type(3):hover div {
+  -webkit-clip-path: circle(70.7% at 50% 50%);
+}
+
+@keyframes animClip1 {
+  0% {
+    -webkit-clip-path: polygon(49% 100%, 98% 100%, 50% 100%, 0 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(47% 100%, 98% 100%, 50% 0, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+@keyframes animClip2 {
+  0% {
+    -webkit-clip-path: polygon(0% 20%, 0 20%, 0 20%, 0 47%, 0 79%, 0 79%, 0% 80%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 58% 0, 100% 0, 100% 50%, 100% 100%, 57% 100%, 0 100%);
+  }
+}

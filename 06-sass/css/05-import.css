@@ -1,0 +1,40 @@
+figure {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+figure:hover {
+  transform: scale(1.05);
+}
+figure:hover.filter1 {
+  filter: grayscale(1);
+}
+figure:hover.filter2 {
+  filter: blur(4px);
+}
+figure:hover.filter3 {
+  filter: opacity(0.5);
+}
+figure:hover.filter4 {
+  filter: sepia(0.8);
+}
+figure:hover.filter5 {
+  filter: invert(1);
+}
+figure:hover.filter6 {
+  filter: brightness(2);
+}
+
+section.content {
+  text-align: center;
+}
+section.content figure {
+  background: #fff url(../images/inosuke.jpg) no-repeat center;
+  background-size: cover;
+  border: 2px solid #d94d9b;
+  border-radius: 110px;
+  display: inline-block;
+  height: 200px;
+  margin: 10px;
+  padding: 0px;
+  width: 200px;
+}

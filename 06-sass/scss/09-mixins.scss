@@ -19,7 +19,7 @@ body main {
 		margin: 0px 8px;
 		width: 320px;
 		&.day {
-			background: url(../imgs/day.png) no-repeat center;
+			background: url(../images/day.png) no-repeat center;
 			background-size: cover;
 		// Uso de los mixins
 		&:nth-of-type(1) { 
@@ -38,7 +38,7 @@ body main {
 		}
 
 		div {
-			background: url(../imgs/night.png) no-repeat center;
+			background: url(../images/night.png) no-repeat center;
 			background-size: cover;
 			height: 100%;
 			transition: all 0.5s ease;

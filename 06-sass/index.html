@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu (SASS) </title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      body {
+          font-family: Poppins, sans;
+          color: #fff;
+          padding: 0;
+          background: #cc6698 url(images/bg.jpg) no-repeat center;
+          background-size: cover;
+          min-height: 100vh;
+      }
+      ul.links {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          margin: 0;
+          gap: 10px;
+      }
+      ul.links li a:link,
+      ul.links li a:visited {
+          background-color: #ffffff11;
+          border: 1px solid #7d3457;
+          display: flex;
+          border-radius: 20px;
+          color: #7d3457;
+          padding: 8px 16px;
+          text-decoration: none;
+          transition: all 0.2s ease-in;
+          width: 200px;
+      }
+      ul.links li a:hover {
+          background-color: #ffffff66;
+      }
+    </style>
+  </head>
+  <body> 
+    <h1>Main Menu (SASS)</h1>
+    <ul class="links">
+      <li><a href="01-nest.html" target="_blank">01 - Nest</a></li>
+      <li><a href="02-parent.html" target="_blank">02 - Parent</a></li>
+      <li><a href="03-comments.html" target="_blank">03 - Comments</a></li>
+      <li><a href="04-variables.html" target="_blank">04 - Variables</a></li>
+      <li><a href="05-import.html" target="_blank">05 - Import</a></li>
+      <li><a href="06-inheritance.html" target="_blank">06 - Inheritance</a></li>
+      <li><a href="07-conditionals.html" target="_blank">07 - Conditionals</a></li>
+      <li><a href="08-loops.html" target="_blank">08 - Loops</a></li>
+      <li><a href="09-mixins.html" target="_blank">09 - Mixins</a></li>
+      <li><a href="10-challenge.html" target="_blank">10 - Challenge</a></li>
+    </ul>
+  </body>
+</html>

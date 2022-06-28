@@ -1,0 +1,86 @@
+main ul.colors {
+  list-style: none;
+  margin: 100px auto;
+  padding: 0px;
+  width: 866px;
+}
+main ul.colors li {
+  border: thin solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 0px;
+  height: 280px;
+  transition: all 0.2s ease;
+  vertical-align: top;
+  width: 80px;
+  /* Ciclos */
+}
+main ul.colors li:nth-child(1) {
+  background-color: rgb(20, 0, 10);
+}
+main ul.colors li:hover:nth-child(1) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(2) {
+  background-color: rgb(40, 0, 20);
+}
+main ul.colors li:hover:nth-child(2) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(3) {
+  background-color: rgb(60, 0, 30);
+}
+main ul.colors li:hover:nth-child(3) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(4) {
+  background-color: rgb(80, 0, 40);
+}
+main ul.colors li:hover:nth-child(4) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(5) {
+  background-color: rgb(100, 0, 50);
+}
+main ul.colors li:hover:nth-child(5) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(6) {
+  background-color: rgb(120, 0, 60);
+}
+main ul.colors li:hover:nth-child(6) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(7) {
+  background-color: rgb(140, 0, 70);
+}
+main ul.colors li:hover:nth-child(7) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(8) {
+  background-color: rgb(160, 0, 80);
+}
+main ul.colors li:hover:nth-child(8) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(9) {
+  background-color: rgb(180, 0, 90);
+}
+main ul.colors li:hover:nth-child(9) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+main ul.colors li:nth-child(10) {
+  background-color: rgb(200, 0, 100);
+}
+main ul.colors li:hover:nth-child(10) {
+  cursor: pointer;
+  transform: scale(1.2);
+}

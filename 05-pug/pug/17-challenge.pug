@@ -1,0 +1,21 @@
+doctype
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Challenge
+        style.
+            ul {
+                list-style: none;
+                padding: 0
+            }
+    body
+        h1 Challenge 
+        ul
+            - var color = 250
+            -for(var i = 1; i <= 10; i++)
+                li(style={
+                    'background-color': 'rgb('+color+','+color+',250)', 
+                    border: '1px solid white',
+                    padding: '34px'
+                })
+                - color-=25

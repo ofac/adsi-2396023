@@ -1,0 +1,24 @@
+body {
+  background-color: #d94d9b;
+  font: 16px Arial;
+}
+body main {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 960px;
+}
+body main header h1 {
+  color: #742d56;
+  border-bottom: 2px solid #742d56;
+  padding-bottom: 30px;
+  text-align: center;
+}
+body main section.content {
+  color: #5f5e60;
+}
+body main section.content h2, body main section.content h3 {
+  color: #742d56;
+  border-bottom: 2px solid #742d56;
+  text-align: center;
+}
