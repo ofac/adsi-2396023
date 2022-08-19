@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clas Vehicle</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        main {
+            background: url(images/vehicle/bg.svg) no-repeat center;
+        }
+        header h1 a:is(:link,:visited:focus),
+        header h1 {
+            color: #4F6D7A;
+        }
+        header h1 small {
+            font-weight: 200;
+        }
+        section {
+            position: relative;
+        }
+        section button.btn__dark {
+            background: url(images/vehicle/btn-dark.svg) no-repeat center;
+            border: none;
+            cursor: pointer;
+            height: 66px;
+            position: absolute;
+            top: -72px;
+            right: 20px;
+            width: 62px;
+            transition: transform 0.2s ease-in;
+        }
+        section button.btn__dark:is(:hover) {
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <small>class</small>Vehicle
+            </h1>
+        </header>
+        <section>
+            <button class="btn__dark"></button>
+        </section>
+    </main>
+    <script>
+        const vehicles = [
+                { 
+                    brand: 'Toyota',  
+                    refer: 'Yaris',  
+                    model: 2020, 
+                    color: 'Orange', 
+                    image: 'images/vehicle/car01.png' 
+                },
+                { 
+                    brand: 'Renault', 
+                    refer: 'Clio',   
+                    model: 2018, 
+                    color: 'Green',  
+                    image: 'images/vehicle/car02.png' 
+                },
+                { 
+                    brand: 'Ford',    
+                    refer: 'Fiesta', 
+                    model: 2016, 
+                    color: 'Blue',   
+                    image: 'images/vehicle/car03.png' 
+                },
+                { 
+                    brand: 'Fiat',    
+                    refer: '500',    
+                    model: 2007, 
+                    color: 'Red',    
+                    image: 'images/vehicle/car04.png' 
+                }
+        ]
+        class Vehicle {
+            constructor(brand, refer, model, color, image) {
+                this.brand = brand
+                this.refer = refer
+                this.model = model
+                this.color = color
+                this.image = image
+            }
+            getInfo() {
+                return `The brand is: ${this.brand}`
+            }
+        }
+        const vh = new Vehicle(vehicles[0].brand, 
+                               vehicles[0].refer, 
+                               vehicles[0].model, 
+                               vehicles[0].color,
+                               vehicles[0].image)
+        console.log(vh)
+        console.log(vh.getInfo())
+    </script>
+</body>
+</html>

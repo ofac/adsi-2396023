@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        b {
+            color: #fff9;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                Variables
+            </h1>
+        </header>
+        <section>
+            <h2 class="type-string"></h2>
+            <h2 class="type-number"></h2>
+            <h2 class="type-boolean"></h2>
+            <h2 class="type-null"></h2>
+            <h2 class="type-undefined"></h2>
+            <h2 class="type-array"></h2>
+            <h2 class="type-object"></h2>
+        </section>
+    </main>
+    <script>
+        // Elements
+        const t_string    = document.querySelector('.type-string')
+        const t_number    = document.querySelector('.type-number')
+        const t_boolean   = document.querySelector('.type-boolean')
+        const t_null      = document.querySelector('.type-null')
+        const t_undefined = document.querySelector('.type-undefined')
+        const t_array     = document.querySelector('.type-array')
+        const t_object    = document.querySelector('.type-object')
+
+        // Type String
+        var msj1 = 'Hello'
+        var msj2 = "World!"
+        t_string.innerHTML = '<b>Type String: </b> ' + msj1 + " " + msj2
+        //t_string.innerHTML = `<b>Type String: </b> ${msj1} ${msj2}`
+
+        // Type Number
+        var num1 = 54.32
+        var num2 = '30' //String
+        t_number.innerHTML = '<b>Type Number: </b> ' + (num1 + parseInt(num2))
+
+        // Type Boolean
+        t_boolean.innerHTML = '<b>Type Boolean: </b> ' + (10<5)
+
+        // Type Null
+        var vnull = null
+        t_null.innerHTML = '<b>Type Null: </b> ' + vnull
+
+        // Type Undefined
+        var vundef = undefined
+        t_undefined.innerHTML = '<b>Type Undedined: </b> ' + vundef
+
+        // Type Array
+        var array = ['🥹', '🥸', '🤬', '😨', '🤮']
+        t_array.innerHTML = '<b>Type Array: </b> ' + array
+
+        // Type Object
+        const hashira = {
+            name:    'Kyoguro Rengoku',
+            element: 'Fire',
+            age:     23
+        }
+        t_object.innerHTML = '<b>Type Object: </b> ' + hashira.name
+
+
+    </script>
+</body>
+</html>

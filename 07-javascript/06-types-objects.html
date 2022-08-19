@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types Objects</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                Types Objects
+            </h1>
+        </header>
+        <section>
+            <ul class="objects"></ul>
+        </section>
+    </main>
+    <script>
+        const objects     = document.querySelector('.objects')
+        const obj_string  = new String
+        const obj_number  = new Number
+        const obj_boolean = new Boolean
+        const obj_array   = new Array
+        const obj_object  = new Object
+        const obj_date    = new Date
+        let content       = ''
+
+        content  = `<li> <b>Type:</b> ${obj_string.constructor.name} </li>`
+        content += `<li> <b>Type:</b> ${obj_number.constructor.name} </li>`
+        content += `<li> <b>Type:</b> ${obj_boolean.constructor.name} </li>`
+        content += `<li> <b>Type:</b> ${obj_array.constructor.name} </li>`
+        content += `<li> <b>Type:</b> ${obj_object.constructor.name} </li>`
+        content += `<li> <b>Type:</b> ${obj_date.constructor.name} </li>`
+
+        objects.innerHTML = content
+
+    </script>
+</body>
+</html>

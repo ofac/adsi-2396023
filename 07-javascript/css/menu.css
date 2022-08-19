@@ -14,12 +14,11 @@ body {
 main {
     background-color: #0008;
     border-radius: 1rem;
-    height: 660px;
-    width: 32rem;
+    height: 680px;
+    width: 26rem;
 }
 header h1 {
     color: #f1ce3f;
-    padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -48,7 +47,7 @@ nav {
     flex-direction: column;
     padding: 1.2rem;
     overflow-y: auto;
-    height: 494px;
+    height: 490px;
     gap: 0.4rem;
 }
 nav li {
@@ -89,13 +88,14 @@ nav li a:hover i {
     transform: scale(0.9);
 }
 section {
-    color: #0003;
+    color: #fffa;
     padding: 1.2rem;
 }
 section h1,
 section h2 {
     color: #f1ce3f99;
     text-align: center;
+    font-size: 1.2rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
     border-bottom: 2px dashed #f1ce3f99;

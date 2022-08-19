@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods Object</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        section h2 {
+            margin: 0;
+        }
+        section img {
+            display: block;
+            margin: 0 auto;
+            width: 140px;
+        }
+        nav.controls {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            margin-top: -20px;
+        }
+        nav.controls figure {
+            background-color: #f1ce3f;
+            border-radius: 6px;
+            color: #0009;
+            cursor: pointer;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            width: 50px;
+        }
+        ul.moves {
+            height: 300px;
+            overflow-y: auto;
+        }
+        ul.moves li:nth-child(odd) {
+            background-color: #0002;
+        }
+        ul.moves li:nth-child(even) {
+            background-color: #fff2;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                Methods Object
+            </h1>
+        </header>
+        <section>
+            <h2 class="title"></h2>
+            <img src="" class="image">
+            <nav class="controls">
+                <figure class="food">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z" clip-rule="evenodd" />
+                    </svg>
+                </figure>
+                <figure class="fire">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
+                    </svg>
+                </figure>
+            </nav>
+            <ul class="moves"></ul>
+        </section>
+    </main>
+    <script>
+        // Elements
+        const title    = document.querySelector('.title')
+        const image    = document.querySelector('.image')
+        const moves    = document.querySelector('.moves')
+        const btn_feed = document.querySelector('.food')
+        const btn_atck = document.querySelector('.fire')
+
+        // Object
+        const pokemon = {
+            // Attributes
+            name: 'Bulbasaur',
+            type: 'Grass',
+            hp: 50,
+            live: true,
+            image: 'https://www.serebii.net/swordshield/pokemon/small/001.png',
+
+            // Methods
+            feed: function() {
+                return this.hp += 10
+            },
+            attack: function() {
+                if(this.hp <= 0) {
+                    this.live = false
+                    return this.name + ' is Dead!'
+                } else {
+                    return this.hp -= 10
+                }
+            }
+        }
+        title.innerHTML = ` ${pokemon.name} (${pokemon.type}) `
+        image.setAttribute('src', pokemon.image)
+        moves.innerHTML = `<li> HP: ${pokemon.hp} </li>`
+        // Events
+        btn_feed.addEventListener('click', (e) => {
+            if (pokemon.live == true) {
+                moves.innerHTML += `<li> HP: ${pokemon.feed()} </li>`
+            }
+        })
+        btn_atck.addEventListener('click', (e) => {
+            if (pokemon.live == true) {
+             moves.innerHTML += `<li> HP: ${pokemon.attack()} </li>`
+            }
+        })
+
+
+    </script>
+</body>
+</html>
