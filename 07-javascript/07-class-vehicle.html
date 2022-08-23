@@ -176,6 +176,10 @@
         figure.landscape button.next {
             background: url(images/vehicle/btn-next.svg) no-repeat center;
         }
+        figure.landscape img.car {
+            position: relative;
+            bottom: -92px;
+        }
         div.methods {
             margin: 44px auto 0 auto;
             display: flex;
@@ -224,6 +228,27 @@
         div.methods button.off.active {
             background: url(images/vehicle/btn-off-act.svg) no-repeat center;
         }
+        main.animate {
+            animation: animMain 0.2s ease-in 1;
+        }
+        @keyframes animMain {
+            0%  { 
+                transform: scale(1);
+            }
+            50%  { 
+                transform: scale(0.9);
+            }
+            100% { 
+                transform: scale(1);
+            }
+        }
+        img.car.on {
+             animation: animCar 0.1s linear infinite;
+        }
+        @keyframes animCar {
+            0%, 100% { transform: translateY(0); }
+            5%       { transform: translateY(-4px); }
+        }
     </style>
 </head>
 <body>
@@ -249,6 +274,7 @@
             </div>
             <figure class="landscape">
                 <button class="prev"></button>
+                <img src="" class="car">
                 <button class="next"></button>
             </figure>
             <h2 class="subtitle2">Methods:</h2>
@@ -276,11 +302,17 @@
         const e_refer  = document.querySelector('.refer') 
         const e_model  = document.querySelector('.model') 
         const e_color  = document.querySelector('.color')  
+        const e_image  = document.querySelector('.car')  
+
         var index_attr = 0
 
         const btn_prev = document.querySelector('.prev')
         const btn_next = document.querySelector('.next')
 
+        // Logic 
+        var engine = false
+
+        // Array Object
         const vehicles = [
                 { 
                     brand: 'Toyota',  
@@ -325,6 +357,19 @@
                 e_refer.textContent = this.refer
                 e_model.textContent = this.model
                 e_color.textContent = this.color
+                e_image.setAttribute('src', this.image)
+            }
+            static startEngine() {
+                if (!engine) {
+                    e_image.classList.add('on')
+                    engine = true
+                }
+            }
+            static offEngine() {
+                if(engine) {
+                    e_image.classList.remove('on')
+                    engine = false
+                }
             }
         }
         // Actions
@@ -335,6 +380,7 @@
         })
         btn_on.addEventListener('click', (event) => {
             removeActives()
+            Vehicle.startEngine()
             btn_on.classList.add('active')
         })
         btn_fw.addEventListener('click', (event) => {
@@ -351,21 +397,30 @@
         })
         btn_off.addEventListener('click', (event) => {
             removeActives()
+            Vehicle.offEngine()
             btn_off.classList.add('active')
         })
         btn_prev.addEventListener('click', (event) => {
             if (index_attr > 0) {
                 index_attr--
+                animateMain()
                 showAttributes()
             }
         })
         btn_next.addEventListener('click', (event) => {
             if (index_attr < vehicles.length-1) {
                 index_attr++
+                animateMain()
                 showAttributes()
             }
         })
         // Functions
+        function animateMain() {
+            main.classList.add('animate')
+            setTimeout(() => {
+                main.classList.remove('animate')
+            }, 500)
+        }
         function removeActives() {
             btns_methods.forEach(element => {
                 element.classList.remove('active')
