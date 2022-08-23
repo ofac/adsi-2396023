@@ -7,8 +7,75 @@
     <title>Class Vehicle</title>
     <link rel="stylesheet" href="css/menu.css">
     <style>
+        /* Dark Mode */
+        main.dark {
+            background: url(images/vehicle/bg-dark.svg) no-repeat center;
+        }
+        main.dark section button.btn_mode {
+            background: url(images/vehicle/btn-light.svg) no-repeat center;
+        }
+        main.dark header h1 a:is(:link,:visited:focus),
+        main.dark header h1,
+        main.dark h2,
+        main.dark div.attributes {
+            color: #c0d6df;
+        }
+        main.dark div.attributes div.brand {
+            background: url(images/vehicle/brand-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.refer {
+            background: url(images/vehicle/refer-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.model {
+            background: url(images/vehicle/model-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.color {
+            background: url(images/vehicle/color-dark.svg) no-repeat center;
+        }
+        main.dark figure.landscape {
+            background-color: #0005;
+        }
+        main.dark figure.landscape button.prev {
+            background: url(images/vehicle/btn-prev-dark.svg) no-repeat center;
+        }
+        main.dark figure.landscape button.next {
+            background: url(images/vehicle/btn-next-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.on {
+            background: url(images/vehicle/btn-on-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw {
+            background: url(images/vehicle/btn-fw-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop {
+            background: url(images/vehicle/btn-stop-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw {
+            background: url(images/vehicle/btn-bw-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.off {
+            background: url(images/vehicle/btn-off-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.on.active {
+            background: url(images/vehicle/btn-on-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw.active {
+            background: url(images/vehicle/btn-fw-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop.active {
+            background: url(images/vehicle/btn-stop-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw.active {
+            background: url(images/vehicle/btn-bw-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.off.active {
+            background: url(images/vehicle/btn-off-dark-act.svg) no-repeat center;
+        }
+
+        /* Light Mode */
         main {
             background: url(images/vehicle/bg.svg) no-repeat center;
+            transition: all 0.4s ease-in;
         }
         header h1 a:is(:link,:visited:focus),
         header h1 {
@@ -20,7 +87,7 @@
         section {
             position: relative;
         }
-        section button.btn__dark {
+        section button.btn_mode {
             background: url(images/vehicle/btn-dark.svg) no-repeat center;
             border: none;
             cursor: pointer;
@@ -31,7 +98,7 @@
             width: 62px;
             transition: transform 0.2s ease-in;
         }
-        section button.btn__dark:is(:hover) {
+        section button.btn_mode:is(:hover) {
             transform: scale(0.9);
         }
         main h2 {
@@ -172,7 +239,7 @@
             </h1>
         </header>
         <section>
-            <button class="btn__dark"></button>
+            <button class="btn_mode"></button>
             <h2 class="subtitle1">Attributes:</h2>
             <div class="attributes">
                 <div class="brand"></div>
@@ -195,6 +262,9 @@
         </section>
     </main>
     <script>
+        const main     = document.querySelector('main')
+        const btn_mode = document.querySelector('.btn_mode')
+
         const btn_on   = document.querySelector('.on')
         const btn_fw   = document.querySelector('.fw')
         const btn_stop = document.querySelector('.stop')
@@ -258,6 +328,11 @@
             }
         }
         // Actions
+        btn_mode.addEventListener('click', e=> {
+            e.preventDefault()
+            e.stopPropagation()
+            main.classList.toggle('dark')
+        })
         btn_on.addEventListener('click', (event) => {
             removeActives()
             btn_on.classList.add('active')
