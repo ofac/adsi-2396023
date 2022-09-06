@@ -33,7 +33,7 @@
             background: url(images/vehicle/color-dark.svg) no-repeat center;
         }
         main.dark figure.landscape {
-            background-color: #0005;
+            background-color: transparent;
         }
         main.dark figure.landscape button.prev {
             background: url(images/vehicle/btn-prev-dark.svg) no-repeat center;
@@ -70,6 +70,16 @@
         }
         main.dark div.methods button.off.active {
             background: url(images/vehicle/btn-off-dark-act.svg) no-repeat center;
+        }
+
+        main.dark figure.parallax div.layer1 {
+            background: url(images/vehicle/layer1-dark.svg) repeat-x;
+        }
+        main.dark figure.parallax div.layer2 {
+            background: url(images/vehicle/layer2-dark.svg) repeat-x;
+        }
+        main.dark figure.parallax div.layer3 {
+            background: url(images/vehicle/layer3-dark.svg) repeat-x;
         }
 
         /* Light Mode */
@@ -298,6 +308,11 @@
         figure.parallax.play.stop div.layer2,
         figure.parallax.play.stop div.layer3 {
             animation-play-state: paused;
+        }
+        figure.parallax.reverse div.layer1,
+        figure.parallax.reverse div.layer2,
+        figure.parallax.reverse div.layer3 {
+            animation-direction: reverse;
         } 
     </style>
 </head>
@@ -426,6 +441,13 @@
             }
             static goForward() {
                 parallax.classList.add('play')
+                parallax.classList.remove('reverse')
+                parallax.classList.remove('stop')
+                moveon = true
+            }
+            static goBackward() {
+                parallax.classList.add('play')
+                parallax.classList.add('reverse')
                 parallax.classList.remove('stop')
                 moveon = true
             }
@@ -448,7 +470,7 @@
             }
         })
         btn_fw.addEventListener('click', (event) => {
-            if (engine) {
+            if (engine && !moveon) {
                 removeActives()
                 Vehicle.goForward()
                 btn_fw.classList.add('active')
@@ -462,8 +484,11 @@
             }
         })
         btn_bw.addEventListener('click', (event) => {
-            removeActives()
-            btn_bw.classList.add('active')
+            if (engine && !moveon) {
+                removeActives()
+                Vehicle.goBackward()
+                btn_bw.classList.add('active')
+            }
         })
         btn_off.addEventListener('click', (event) => {
             if (engine && !moveon) {

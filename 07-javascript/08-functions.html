@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        main h2 {
+            margin-top: 4rem;
+        }
+        main h2:first-of-type {
+            margin-top: 0;
+        }
+        main h3 {
+            text-align: center;
+            margin: 0;
+        }
+        div.numbers {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            align-items: center;
+        }
+        div.numbers span {
+            font-size: 2rem;
+        }
+        div.numbers input {
+            border: none;
+            border-radius: 1rem;
+            padding: 0.6rem;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                Functions
+            </h1>
+        </header>
+        <section>
+            <h2>Without params or args</h2>
+            <h3 class="greeting"></h3>
+            <h2>With params or args</h2>
+            <div class="numbers">
+                <input type="number" class="n1" placeholder="Number 1">
+                <span>+</span>
+                <input type="number" class="n2" placeholder="Number 2">
+                <span>=</span>
+                <span class="result"></span>
+            </div>
+            <h2>Returning value</h2>
+            <h3 class="fullDate"></h3>
+        </section>
+    </main>
+    <script>
+        // -- 
+        const greeting = document.querySelector('.greeting')
+        const n1       = document.querySelector('.n1')
+        const n2       = document.querySelector('.n2')
+        const result   = document.querySelector('.result')
+        const fullDate = document.querySelector('.fullDate')
+        // function without parameters or arguments
+        function showGreeting() {
+            greeting.textContent = '😎 Welcome Guest!'
+        }
+        // Call the function
+        showGreeting()
+
+        // function with parameters or arguments
+        function calculateSum(n1, n2) {
+            if (n1 != '' && n2 != '') {
+                result.textContent = (parseInt(n1) + parseInt(n2))
+            }
+        }
+        n1.oninput = function() {
+            if(n1.value.length < 5) {
+                calculateSum(n1.value, n2.value)
+            } else {
+                n1.value = n1.value.slice(0,-1)
+            }
+        }
+        n2.oninput = function() {
+            if(n2.value.length < 5) {
+                calculateSum(n1.value, n2.value)
+            } else {
+                n2.value = n2.value.slice(0,-1)
+            }
+        }
+
+        // function that return a value
+        let td = new Date
+        function showDate() {
+            return `${td.getHours()} hours : ${td.getMinutes()} minutes`
+        }
+        fullDate.textContent = `Time: ${showDate()}`
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
