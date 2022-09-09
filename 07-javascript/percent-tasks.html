@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+<body>
+    <main>
+        <h2>Task Manager</h2>
+        <hr>
+        <div class="taskManager">
+            <input type="text" class="nameTask" placeholder="Name Task">
+            <input type="text" class="timeTask" placeholder="Time Task">
+            <button class="addTask">+ Task</button>
+        </div>
+        <ol class="listTasks"></ol>
+    </main>
+
+    <script>
+        const addTask   = document.querySelector('.addTask')
+        const listTasks = document.querySelector('.listTasks')
+        var   btnsStart = document.querySelectorAll('.btn')
+        let taskNum  = 1
+
+        addTask.addEventListener('click', (e) => {
+            let nameTask = document.querySelector('.nameTask').value
+            let timeTask = document.querySelector('.timeTask').value
+            if (nameTask != '' && timeTask != '') {
+                listTasks.innerHTML += `<li> ${nameTask} | ${timeTask} seconds 
+                                        <button class='btn btn-${taskNum}'> Start </button> 
+                                        <progress class="prog-${taskNum}"></progress> </li>`
+                taskNum++
+                clearFields()
+                activeButtons()
+                btnsStart = document.querySelectorAll('.btn')
+            }
+        })
+
+        function clearFields() {
+            document.querySelector('.nameTask').value = ''
+            document.querySelector('.timeTask').value = ''
+        }
+
+        function activeButtons() {
+            for (let i = 0; i < btnsStart.length; i++) {
+                btnsStart[i].onclick = function() {
+                    alert()
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

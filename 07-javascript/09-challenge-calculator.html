@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Calc</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        main {
+            background: url(images/calc/bg-dark.svg) no-repeat center;
+        }
+        header h1 a:is(:link) {
+            color: #cbcddb;
+            margin-top: 40px;
+        }
+        header button.mode {
+            border: none;
+            background: url(images/calc/mode.svg) no-repeat center;
+            height: 40px;
+            display: block;
+            margin: 0 auto;
+            transition: all 0.2s ease-in;
+            width: 120px;
+        }
+        header button.mode:is(:hover, :focus) {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        div.display {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 40px;
+            text-align: right;
+        }
+        div.display output.operation {
+            font-weight: 275;
+            font-size: 28px;
+            color: #6E768A;
+        }
+        div.display output.result {
+            font-weight: 275;
+            font-size: 54px;
+            color: #B6B9C7;
+        }
+        div.buttons {
+            display: grid;
+            gap: 14px;
+            margin-top: -20px;
+            justify-content: center;
+            grid-template-columns: repeat(4, 68px);
+            grid-template-rows: repeat(5, 68px);
+        }
+        div.buttons button {
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease-in;
+        }
+        div.buttons button.clear {
+            background: url(images/calc/clear.svg) no-repeat center;
+        }
+        div.buttons button.back {
+            background: url(images/calc/back.svg) no-repeat center;
+        }
+        div.buttons button.pow {
+            background: url(images/calc/pow.svg) no-repeat center;
+        }
+        div.buttons button.div {
+            background: url(images/calc/div.svg) no-repeat center;
+        }
+        div.buttons button:is(:hover, :focus) {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </h1>
+            <button class="mode"></button>
+        </header>
+        <section>
+            <div class="display">
+                <output class="operation">4.900 + 15.910</output>
+                <output class="result">20.810</output>
+            </div>
+            <div class="buttons">
+                <button class="clear"></button>
+                <button class="back"></button>
+                <button class="pow"></button>
+                <button class="div"></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </section>
+    </main>
+    <script>
+
+    </script>
+</body>
+</html>
