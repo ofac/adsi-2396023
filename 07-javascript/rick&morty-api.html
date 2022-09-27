@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty API Rest</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+        body {
+            background-color: #333;
+            color: #bbb;
+            font-family: 'Raleway', sans-serif;
+            padding: 0;
+        }
+        ul.characters {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            list-style: none;
+            margin: 1rem;
+            padding: 0;
+        }
+        @media screen and (max-width: 1024px) {
+            ul.characters {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        ul.characters li {
+            background-color: #181818;
+            border-radius: 10px;
+            display: flex;
+        }
+        ul.characters li figure {
+            margin: 0;
+            padding: 0;
+            margin-right: 1rem;
+        }
+        ul.characters li figure img {
+            border-radius: 10px 0px 0px 10px;
+            height: 100%;
+            object-fit: cover;
+        }
+        ul.characters li div {
+            flex-grow: 2;
+        }
+        ul.characters li div h2 {
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #bbb;
+        }
+        ul.characters li button {
+            background-color: #333;
+            border: none;
+            color: #bbb;
+            font-size: 1.2rem;
+            border-radius: 2rem;
+            padding: 0.6rem 2rem;
+            transition: all 0.5s ease-in;
+        }
+        ul.characters li button:is(:hover,:focus) {
+            background-color: #666;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <ul class="characters"></ul>
+
+    <script>
+        const characters = document.querySelector('.characters')
+
+        async function getCharacters() {
+            for (let i = 1; i <= 120; i++) {
+                let resp  = await fetch('https://rickandmortyapi.com/api/character/' + i)
+                let char  = await resp.json()
+                //console.log(char)
+                characters.innerHTML += `<li> 
+                                              <figure>
+                                                <img src="${char.image}">
+                                              </figure>
+                                              <div>
+                                                <h2>${char.id}: ${char.name}</h2> 
+                                                <h4>Gender: ${char.gender}</h4>
+                                                <h4>Status: ${char.status}</h4>
+                                                <button data-id='${char.id}' class='btnShow'> Show more... </button>
+                                              </div>
+                                         </li>`
+                if (i == 120) {
+                    addClicksEvents()
+                }
+            }
+        }
+        function addClicksEvents() {
+            const btnShows = document.querySelectorAll('.btnShow')
+            btnShows.forEach(element => {
+                element.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    alert(element.dataset.id)
+                })
+            })
+        }
+        getCharacters()
+    </script>
+</body>
+</html>
