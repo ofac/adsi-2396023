@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/tailwind-3.0.23.js"></script>
+</head>
+<body class="bg-gradient-to-r 
+             from-indigo-500 
+             to-pink-500 
+             min-h-screen">
+    <main class="bg-black 
+                 bg-opacity-50
+                 min-h-screen">
+        <header class="bg-indigo-100 
+                       bg-opacity-80 
+                       p-10 
+                       shadow-xl
+                       flex
+                       items-center
+                       justify-center">
+            <a class="text-2xl
+                      bg-indigo-900
+                      text-white
+                      py-2
+                      px-4
+                      mr-20
+                      transition
+                      hover:bg-indigo-800
+                      hover:-translate-x-1
+                      rounded-md" href="index.html"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </a>
+            <h1 class="text-center 
+                       text-4xl 
+                       font-bold 
+                       text-indigo-900">Layout</h1>
+        </header>
+        <section class="p-10 
+                        mx-auto 
+                        text-white
+                        w-10/12
+                        my-0">
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4">Container:</h2>
+            <div class="container 
+                        rounded-sm
+                        my-10
+                        bg-white
+                        p-10
+                        text-indigo-900
+                        text-5xl
+                        sm:bg-red-600 
+                        sm:text-white
+                        md:bg-green-600
+                        lg:bg-blue-600
+                        lg:text-8xl
+                        xl:bg-yellow-600
+                        flex
+                        flex-col
+                        items-center
+                        justify-center
+                        h-96">
+                        <p class="uppercase
+                                  tracking-widest">
+                            container 
+                        </p>
+                        <p class="lowercase text-xl hidden md:hidden sm:block">small</p>
+                        <p class="lowercase text-xl hidden lg:hidden md:block">medium</p>
+                        <p class="lowercase text-xl hidden xl:hidden lg:block">large</p>
+                        <p class="lowercase text-xl hidden 2xl:hidden xl:block">extra large</p>
+            </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Columns</h2>
+            <div class="columns-1 md:columns-2 lg:columns-4 gap-10">
+                <img class="w-full mb-10" src="https://via.placeholder.com/200x200">
+                <img class="w-full mb-10" src="https://via.placeholder.com/200x200">
+                <img class="w-full mb-10" src="https://via.placeholder.com/200x200">
+                <img class="w-full mb-10" src="https://via.placeholder.com/200x200">
+            </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Display Flex:</h2>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-2">
+                    <div class="flex flex-col justify-center items-center border p-4 rounded-lg">
+                        <img class="w-24
+                                    h-24 
+                                    rounded-full
+                                    mb-4" src="https://via.placeholder.com/200x200">
+                        <div class="flex flex-col justify-center items-center">
+                            <strong>Homer Simpson</strong>
+                            <span>Technical Advisor</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center border p-4 rounded-lg">
+                        <img class="w-24
+                                    h-24 
+                                    rounded-full
+                                    mb-4" src="https://via.placeholder.com/200x200">
+                        <div class="flex flex-col justify-center items-center">
+                            <strong>Bart Simpson</strong>
+                            <span>Web Designer</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center border p-4 rounded-lg">
+                        <img class="w-24
+                                    h-24 
+                                    rounded-full
+                                    mb-4" src="https://via.placeholder.com/200x200">
+                        <div class="flex flex-col justify-center items-center">
+                            <strong>Liza Simpson Alfred</strong>
+                            <span>CEO</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Display Grid:</h2>
+                <div class="grid gap-4 md:grid-cols-3 grid-cols-1">
+                    <div class="p-4 bg-indigo-500 shadow-lg rounded-lg">01</div>
+                    <div class="p-4 bg-indigo-500 shadow-lg rounded-lg">02</div>
+                    <div class="p-4 bg-indigo-500 shadow-lg rounded-lg">03</div>
+                    <div class="p-4 bg-indigo-500 shadow-lg rounded-lg">04</div>
+                    <div class="p-4 bg-indigo-500 shadow-lg rounded-lg">05</div>
+                    <div class="p-4 bg-indigo-500 shadow-lg rounded-lg">06</div>
+                </div>
+                <!--  -->
+                <h2 class="text-2xl
+                            border-b-2
+                            opacity-80
+                            pb-4
+                            my-10">Floats</h2>
+            
+            <p class="leading-8 text-justify w-10/12 mx-auto">
+                <img src="https://via.placeholder.com/320x240" class="float-none m-2 rounded-md sm:float-left">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus provident repellat unde soluta vitae. Aspernatur dolore inventore possimus rem quos, suscipit recusandae. 
+                <br><br>
+                Itaque repudiandae libero dolore odit quis quasi provident minus officia saepe eaque velit maxime recusandae earum aliquam ullam iste sapiente et, modi corrupti inventore rem dolorem eum porro error! Consectetur, iste similique. Sit labore facere temporibus distinctio placeat sequi mollitia ab consequatur et quasi. 
+                Possimus similique saepe, maxime sint dolor ipsam culpa placeat totam odit cum enim eos?
+            </p>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Object Fit Cover:</h2>
+            <div class="bg-indigo-300 rounded-lg p-8 w-6/12">
+                 <img src="http://placekitten.com/800/600" class="object-cover h-48 w-full">
+            </div>
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mt-10
+                       mb-10">Object Fit Contain:</h2>
+            <div class="bg-indigo-300 rounded-lg p-8 w-6/12">
+                 <img src="http://placekitten.com/800/600" class="object-contain h-48 w-full">
+            </div>
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mt-10
+                       mb-10">Object Fit Fill:</h2>
+            <div class="bg-indigo-300 rounded-lg p-8 w-6/12">
+                 <img src="http://placekitten.com/800/600" class="object-fill h-48 w-full">
+            </div>
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mt-10
+                       mb-10">Object Fit None:</h2>
+            <div class="bg-indigo-300 rounded-lg p-8 w-6/12">
+                 <img src="http://placekitten.com/800/600" class="object-none h-48 w-full">
+            </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Overflow Visible</h2>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="overflow-visible relative max-w-sm mx-auto bg-white shadow-lg rounded-xl flex items-center gap-6">
+                    <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="http://placekitten.com/400/400">
+                    <div class="flex flex-col py-5 pl-24">
+                    <strong class="text-indigo-800 text-sm font-medium">Gaston</strong>
+                    <span class="text-indigo-400 text-sm font-medium">Locale Cat</span>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Overflow  Hidden</h2>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="overflow-hidden relative max-w-sm mx-auto bg-white shadow-lg rounded-xl flex items-center gap-6">
+                    <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="http://placekitten.com/400/400">
+                    <div class="flex flex-col py-5 pl-24">
+                    <strong class="text-indigo-800 text-sm font-medium">Gaston</strong>
+                    <span class="text-indigo-400 text-sm font-medium">Locale Cat</span>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Overflow  Y Auto</h2>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="overflow-y-auto h-72 relative max-w-sm mx-auto bg-white shadow-lg rounded-xl flex flex-col divide-y divide-indigo-800">
+                    <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="http://placekitten.com/400/400">
+                    <div class="flex flex-col">
+                        <strong class="text-indigo-800 text-sm font-medium">Gaston 01</strong>
+                        <span class="text-indigo-400 text-sm font-medium">Locale 1</span>
+                    </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="http://placekitten.com/400/400">
+                    <div class="flex flex-col">
+                        <strong class="text-indigo-800 text-sm font-medium">Gaston 02</strong>
+                        <span class="text-indigo-400 text-sm font-medium">Locale 2</span>
+                    </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="http://placekitten.com/400/400">
+                    <div class="flex flex-col">
+                        <strong class="text-indigo-800 text-sm font-medium">Gaston 03</strong>
+                        <span class="text-indigo-400 text-sm font-medium">Locale 3</span>
+                    </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="http://placekitten.com/400/400">
+                    <div class="flex flex-col">
+                        <strong class="text-indigo-800 text-sm font-medium">Gaston 04</strong>
+                        <span class="text-indigo-400 text-sm font-medium">Locale 4</span>
+                    </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="http://placekitten.com/400/400">
+                    <div class="flex flex-col">
+                        <strong class="text-indigo-800 text-sm font-medium">Gaston 05</strong>
+                        <span class="text-indigo-400 text-sm font-medium">Locale 5</span>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!--  -->
+                <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Position Relative/Absolute</h2>
+                       <div class="relative p-10 h-96 bg-indigo-400 rounded-md">
+                            <p class="text-indigo-900">Relative parent</p>
+                            <div class="absolute 
+                                        rounded-xl 
+                                        bg-indigo-800 
+                                        text-indigo-200 
+                                        p-4 
+                                        top-60 
+                                        left-60">
+                                <p>Absolute child</p>
+                            </div>
+                        </div>
+                <!--  -->
+                <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Visibility: Invisible</h2>
+                       <div class="grid grid-cols-3 gap-4">
+                            <div class="visible p-10 bg-indigo-400 rounded-lg">01</div>
+                            <div class="invisible p-10 bg-indigo-400 rounded-lg">02</div>
+                            <div class="p-10 bg-indigo-400 rounded-lg">03</div>
+                        </div>
+                <!--  -->
+                <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Z Index</h2>
+                       <div class="relative rounded-xl overflow-auto p-8">
+                            <div class="flex justify-center -space-x-3 font-mono text-white text-sm font-bold leading-6">
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-20">05</div>
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center bg-pink-600 shadow-lg ring-2 ring-white z-30">04</div>
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-20">03</div>
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center bg-pink-600 shadow-lg ring-2 ring-white z-30">02</div>
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-0">01</div>
+                            </div>
+                        </div>
+                <!--  -->
+
+
+
+        </section>
+    </main>
+</body>
+</html>

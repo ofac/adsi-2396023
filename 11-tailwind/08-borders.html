@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/tailwind-3.0.23.js"></script>
+</head>
+<body class="bg-gradient-to-r 
+             from-indigo-500 
+             to-pink-500 
+             min-h-screen">
+    <main class="bg-black 
+                 bg-opacity-50
+                 min-h-screen">
+        <header class="bg-indigo-100 
+                       bg-opacity-80 
+                       p-10 
+                       shadow-xl
+                       flex
+                       items-center
+                       justify-center">
+            <a class="text-2xl
+                      bg-indigo-900
+                      text-white
+                      py-2
+                      px-4
+                      mr-20
+                      transition
+                      hover:bg-indigo-800
+                      hover:-translate-x-1
+                      rounded-md" href="index.html"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </a>
+            <h1 class="text-center 
+                       text-4xl 
+                       font-bold 
+                       text-indigo-900">Borders</h1>
+        </header>
+        <section class="p-10 
+                        mx-auto 
+                        text-white
+                        w-10/12
+                        my-0">
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Border Radius</h2>
+            <h3 class="my-4">Rounded corners</h3>
+                       <div class="relative rounded-xl overflow-auto p-8">
+                        <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded</p>
+                            <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded"></div>
+                          </div>
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-md</p>
+                            <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-md"></div>
+                          </div>
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-lg</p>
+                            <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-lg"></div>
+                          </div>
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-full</p>
+                            <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+            <h3 class="my-4">Rounding sides separately</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-t-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-t-lg"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-r-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-r-lg"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-b-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-b-lg"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-l-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-l-lg"></div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="my-4">Rounding corners separately</h3>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-tl-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-tl-lg"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-tr-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-tr-lg"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-br-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-br-lg"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">rounded-bl-lg</p>
+                    <div class="p-4 shadow-sm bg-indigo-500 w-16 h-16 rounded-bl-lg"></div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Border Width</h2>
+            <h3 class="my-4">All sides</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-2</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-2"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-4</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-4"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-8</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-8"></div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="my-4">Individual sides</h3>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-t-4</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-t-4"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-r-4</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-r-4"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-b-4</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-b-4"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-l-4</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-l-4"></div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="my-4">Horizontal and vertical sides</h3>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-x-4</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-x-4"></div>
+                  </div>
+                  <div class="flex flex-col items-center shrink-0">
+                    <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-y-4</p>
+                    <div class="p-4 shadow-sm bg-black/20 w-16 h-16 border-indigo-400 border-y-4"></div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Border Style</h2>
+                       <div class="relative rounded-xl overflow-auto p-8">
+                        <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-solid</p>
+                            <button class="px-4 py-2 font-semibold text-sm bg-black/20e text-indigo-200 rounded-md shadow-sm border-indigo-400 border-2 border-solid">Button A</button>
+                          </div>
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-dashed</p>
+                            <button class="px-4 py-2 font-semibold text-sm bg-black/20e text-indigo-200 rounded-md shadow-sm border-indigo-400 border-2 border-dashed">Button A</button>
+                          </div>
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-dotted</p>
+                            <button class="px-4 py-2 font-semibold text-sm bg-black/20e text-indigo-200 rounded-md shadow-sm border-indigo-400 border-2 border-dotted">Button A</button>
+                          </div>
+                          <div class="flex flex-col items-center shrink-0">
+                            <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">border-double</p>
+                            <button class="px-4 py-2 font-semibold text-sm bg-black/20e text-indigo-200 rounded-md shadow-sm border-indigo-400 border-4 border-double">Button A</button>
+                          </div>
+                        </div>
+                      </div>
+                <h2 class="text-2xl
+                      border-b-2
+                      opacity-80
+                      pb-4
+                      my-10">Divide</h2>
+                      <div class="relative rounded-xl overflow-auto">
+                        <div class="grid grid-cols-1 divide-y divide-indigo-200 divide-dotted font-mono text-sm text-center font-bold leading-6 shadow-lg overflow-hidden max-w-sm mx-auto">
+                          <div class="p-4 text-indigo-200 bg-black/40">01</div>
+                          <div class="p-4 text-indigo-200 bg-black/40">02</div>
+                          <div class="p-4 text-indigo-200 bg-black/40">03</div>
+                        </div>
+                      </div>
+
+
+        </section>
+    </main>
+</body>
+</html>

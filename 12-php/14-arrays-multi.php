@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?="Hello World!"?></title>
+    <title><?="Arrays Multidimensionals"?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -21,7 +21,7 @@
                     <a class="nav-link" aria-current="page" href="index.php">&larr; Main Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">01- Hello World</a>
+                    <a class="nav-link active" aria-current="page" href="#">14- Arrays Multidimensionals</a>
                 </li>
             </ul>
             </div>
@@ -31,11 +31,26 @@
         <div class="row">
             <div class="col-md-6 offset-md-3 text-center">
                 <?php 
-                    echo "<h1 class='mt-5'>Hello World!</h1><hr>";
-                    print('<p class="text-start text-muted lh-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem ea id odit corporis sapiente vel tenetur aut molestias ducimus optio magnam maiores repudiandae alias aperiam eveniet ipsum dolore, explicabo inventore quam nam possimus, voluptatem corrupti. Non quas excepturi dolores, natus odit laudantium ipsum dolore vitae blanditiis rem consequuntur magni alias labore recusandae eum sapiente, perferendis assumenda omnis ab, molestiae accusantium. Quasi repellat, nesciunt provident assumenda quos velit eos maiores quam at, earum consequuntur consequatur deserunt explicabo! Facere architecto laboriosam accusantium aspernatur possimus reprehenderit sapiente odit quasi. Ab est officiis, explicabo, qui at quam illo commodi et provident ad assumenda?
-                    </p>')
+                    echo "<h1 class='mt-5'>Arrays Multidimensionals</h1><hr>";
                 ?>
+                <?php 
+					$bicycles = array(
+						'Santa Cruz'  => array('Nomad', 'MegaTower', 'HighTower'),
+						'Intense'     => array('Carbine', 'Tracer', 'Spider'),
+						'Specialized' => array('Enduro', 'Stumjumper', 'Camber')
+					);
+					//var_dump($bicycles);
+				?>
+				<table class="table table-striped table-hover table-bordered mt-5">
+					<?php foreach ($bicycles as $brand => $value): ?>
+						<tr>
+							<th class="bg-dark text-light"><?php echo $brand ?></th>
+							<?php foreach ($value as $reference): ?>
+								<td><?php echo $reference; ?></td>
+							<?php endforeach ?>
+						</tr>
+					<?php endforeach ?>
+				</table>
             </div>
         </div>
     </main>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        .bg-stripes-white {
+            background-image: linear-gradient(135deg,#ffffff88 10%,
+                                                       transparent 0,
+                                                       transparent 50%,
+                                                     #ffffff88 0,
+                                                     #ffffff88 60%,
+                                                     transparent 0,
+                                                     transparent);
+            background-size: 7.07px 7.07px;
+        }
+    </style>
+    <script src="js/tailwind-3.0.23.js"></script>
+</head>
+<body class="bg-gradient-to-r 
+             from-indigo-500 
+             to-pink-500 
+             min-h-screen">
+    <main class="bg-black 
+                 bg-opacity-50
+                 min-h-screen">
+        <header class="bg-indigo-100 
+                       bg-opacity-80 
+                       p-10 
+                       shadow-xl
+                       flex
+                       items-center
+                       justify-center">
+            <a class="text-2xl
+                      bg-indigo-900
+                      text-white
+                      py-2
+                      px-4
+                      mr-20
+                      transition
+                      hover:bg-indigo-800
+                      hover:-translate-x-1
+                      rounded-md" href="index.html"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </a>
+            <h1 class="text-center 
+                       text-4xl 
+                       font-bold 
+                       text-indigo-900">Backgrounds</h1>
+        </header>
+        <section class="p-10 
+                        mx-auto 
+                        text-white
+                        w-10/12
+                        my-0">
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Background Attachment</h2>
+            <div class="relative rounded-xl overflow-auto">
+            <div class="px-4">
+                <div class="max-w-lg mx-auto h-80 overflow-y-scroll scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 bg-cover shadow-lg" style="background-image:url('http://placekitten.com/400/400'); background-position: center -80px;">
+                <div class="mt-40">
+                    <div class="bg-white p-4 sm:p-8">
+                    <div class="font-inter font-extrabold text-2xl text-black tracking-tight">My trip to the summit</div>
+                    <div class="mt-1 font-medium text-sm text-slate-500">November 16, 2021 · 4 min read</div>
+                    <p class="mt-4 leading-7 text-slate-500">Maybe we can live without libraries, people like you and me. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now, in a branch at the local library and finding drawings of pee-pees and wee-wees on the Cat in the Hat and the Five Chinese Brothers? Doesn't HE deserve better?</p>
+                    <p class="mt-4 leading-7 text-slate-500">Look. If you think this is about overdue fines and missing books, you'd better think again. This is about that kid's right to read a book without getting his mind warped! Or: maybe that turns you on, Seinfeld; maybe that's how y'get your kicks. You and your good-time buddies.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Background Clip</h2>
+            <h3 class="my-4">Cropping Text</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="text-4xl sm:text-5xl font-extrabold leading-none tracking-tight text-center">
+                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                    Hello world
+                  </span>
+                </div>
+              </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Background Color</h2>
+            <div class="relative rounded-xl overflow-auto p-8">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 text-sm text-white">
+                <div class="flex flex-col items-center shrink-0">
+                <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">bg-indigo-500</p>
+                <button class="px-4 py-2 font-semibold text-sm bg-indigo-500 text-white rounded-md shadow-sm opacity-100">Button A</button>
+                </div>
+                <div class="flex flex-col items-center shrink-0">
+                <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">bg-indigo-500/75</p>
+                <button class="px-4 py-2 font-semibold text-sm bg-indigo-500/75 text-white rounded-md shadow-sm opacity-100">Button B</button>
+                </div>
+                <div class="flex flex-col items-center shrink-0">
+                <p class="font-medium text-sm text-indigo-200 font-mono text-center mb-3">bg-indigo-500/50</p>
+                <button class="px-4 py-2 font-semibold text-sm bg-indigo-500/50 text-white rounded-md shadow-sm opacity-100">Button C</button>
+                </div>
+            </div>
+            </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Background Repeat</h2>
+            <h3 class="my-4">Repeat</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="w-full mx-auto max-w-xl bg-black/25 h-80 bg-repeat bg-center shadow-xl rounded-lg" style="background-image:url('imgs/background-pattern.svg');">
+                </div>
+            </div>
+            <h3 class="my-4">No Repeat</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="w-full mx-auto max-w-xl bg-black/25 h-64 bg-no-repeat bg-center shadow-xl rounded-lg" style="background-image:url('imgs/background-pattern.svg');">
+                </div>
+              </div>
+              <h3 class="my-4">Repeat Horizontally</h3>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="w-full mx-auto max-w-xl bg-black/25 h-64 bg-repeat-x bg-center shadow-xl rounded-lg" style="background-image:url('imgs/background-pattern.svg');">
+                </div>
+              </div>
+              <h3 class="my-4">Repeat Vertically</h3>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="w-full mx-auto max-w-xl bg-black/25 h-64 bg-repeat-y bg-center shadow-xl rounded-lg" style="background-image:url('imgs/background-pattern.svg');">
+                </div>
+              </div>
+              <!--  -->
+              <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Background Size</h2>
+            <h3 class="my-4">Contain</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="relative flex items-center justify-center rounded-lg overflow-hidden w-56 sm:w-96 mx-auto">
+                  <div class="absolute inset-0 opacity-50 bg-stripes-white"></div>
+                  <div class="relative z-10 w-full h-48 bg-contain bg-no-repeat bg-center sm:bg-top bg-[url(http://placekitten.com/400/400)]">
+                  </div>
+                </div>
+              </div>
+              <h3 class="my-4">Cover</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="relative flex items-center justify-center rounded-lg overflow-hidden w-56 sm:w-96 mx-auto">
+                  <div class="absolute inset-0 opacity-50 bg-stripes-white"></div>
+                  <div class="relative z-10 w-full h-48 bg-cover bg-no-repeat bg-center sm:bg-center bg-[url(http://placekitten.com/400/400)]">
+                  </div>
+                </div>
+              </div>
+            <!--  -->
+            <h2 class="text-2xl
+                        border-b-2
+                        opacity-80
+                        pb-4
+                        my-10">Background Image</h2>
+            <h3 class="my-4">Linear gradients</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="space-y-4">
+                  <div class="h-14 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+                  <div class="h-14 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500"></div>
+                  <div class="h-14 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+                  <div class="h-14 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                </div>
+              </div>
+
+
+        </section>
+    </main>
+</body>
+</html>

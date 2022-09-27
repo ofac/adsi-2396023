@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?="Hello World!"?></title>
+    <title><?="Exceptions"?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -21,7 +21,7 @@
                     <a class="nav-link" aria-current="page" href="index.php">&larr; Main Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">01- Hello World</a>
+                    <a class="nav-link active" aria-current="page" href="#">32- Exceptions</a>
                 </li>
             </ul>
             </div>
@@ -31,11 +31,36 @@
         <div class="row">
             <div class="col-md-6 offset-md-3 text-center">
                 <?php 
-                    echo "<h1 class='mt-5'>Hello World!</h1><hr>";
-                    print('<p class="text-start text-muted lh-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem ea id odit corporis sapiente vel tenetur aut molestias ducimus optio magnam maiores repudiandae alias aperiam eveniet ipsum dolore, explicabo inventore quam nam possimus, voluptatem corrupti. Non quas excepturi dolores, natus odit laudantium ipsum dolore vitae blanditiis rem consequuntur magni alias labore recusandae eum sapiente, perferendis assumenda omnis ab, molestiae accusantium. Quasi repellat, nesciunt provident assumenda quos velit eos maiores quam at, earum consequuntur consequatur deserunt explicabo! Facere architecto laboriosam accusantium aspernatur possimus reprehenderit sapiente odit quasi. Ab est officiis, explicabo, qui at quam illo commodi et provident ad assumenda?
-                    </p>')
+                    echo "<h1 class='mt-5'>Exceptions</h1><hr>";
                 ?>
+                <form action="" method="POST">
+					<div class="mb-3">
+						<input type="number" class="form-control" name="age" placeholder="Enter your age">
+					</div>
+					<div class="mb-3">
+						<input type="submit" value="Validate" class="btn btn-success">
+					</div>
+				</form>
+				<?php 
+					if ($_POST) {
+						function validate_age($age) {
+							if ($age < 18) {
+								throw new Exception("You can't vote!");
+							}
+							return true;
+						}
+						try {
+							validate_age($_POST['age']);
+							echo '<div class="alert alert-success">
+									You can vote!
+								  </div>';
+						} catch (Exception $e) {
+							echo '<div class="alert alert-danger">
+									Error: '.$e->getMessage().'
+								  </div>';
+						}
+					}
+				?>
             </div>
         </div>
     </main>

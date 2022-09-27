@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?="Hello World!"?></title>
+    <title><?="Forms (GET)"?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -21,7 +21,7 @@
                     <a class="nav-link" aria-current="page" href="index.php">&larr; Main Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">01- Hello World</a>
+                    <a class="nav-link active" aria-current="page" href="#">22- Forms (GET)</a>
                 </li>
             </ul>
             </div>
@@ -29,13 +29,31 @@
     </nav>
     <main class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3 text-center">
+            <div class="col-md-6 offset-md-3">
                 <?php 
-                    echo "<h1 class='mt-5'>Hello World!</h1><hr>";
-                    print('<p class="text-start text-muted lh-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem ea id odit corporis sapiente vel tenetur aut molestias ducimus optio magnam maiores repudiandae alias aperiam eveniet ipsum dolore, explicabo inventore quam nam possimus, voluptatem corrupti. Non quas excepturi dolores, natus odit laudantium ipsum dolore vitae blanditiis rem consequuntur magni alias labore recusandae eum sapiente, perferendis assumenda omnis ab, molestiae accusantium. Quasi repellat, nesciunt provident assumenda quos velit eos maiores quam at, earum consequuntur consequatur deserunt explicabo! Facere architecto laboriosam accusantium aspernatur possimus reprehenderit sapiente odit quasi. Ab est officiis, explicabo, qui at quam illo commodi et provident ad assumenda?
-                    </p>')
+                    echo "<h1 class='mt-5 text-center'>Forms (GET)</h1><hr>";
                 ?>
+                <form action="" method="GET">
+					<div class="mb-3">
+						<label for="name" class="form-label">Full Name:</label>
+						<input type="text" class="form-control" name="name" id="name">
+					</div>
+					<div class="mb-3">
+						<label for="email" class="form-label">Email:</label>
+						<input type="email" class="form-control" name="email" id="email">
+					</div>
+					<div class="mb-3">
+						<input type="submit" class="btn btn-success" value="Send Form">
+						<input type="reset" class="btn btn-light" value="Clear Form">
+					</div>
+				</form>
+				<?php if ($_GET): ?>
+					<div class="alert alert-success">
+						<strong>Full Name:</strong> <?php echo $_GET['name']; ?>
+						<br>
+						<strong>Email:</strong> <?php echo $_GET['email']; ?>
+					</div>
+				<?php endif ?>
             </div>
         </div>
     </main>

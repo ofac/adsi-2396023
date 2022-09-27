@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?="Hello World!"?></title>
+    <title><?="Send Mail"?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -21,7 +21,7 @@
                     <a class="nav-link" aria-current="page" href="index.php">&larr; Main Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">01- Hello World</a>
+                    <a class="nav-link active" aria-current="page" href="#">31- Send Mail</a>
                 </li>
             </ul>
             </div>
@@ -31,11 +31,39 @@
         <div class="row">
             <div class="col-md-6 offset-md-3 text-center">
                 <?php 
-                    echo "<h1 class='mt-5'>Hello World!</h1><hr>";
-                    print('<p class="text-start text-muted lh-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem ea id odit corporis sapiente vel tenetur aut molestias ducimus optio magnam maiores repudiandae alias aperiam eveniet ipsum dolore, explicabo inventore quam nam possimus, voluptatem corrupti. Non quas excepturi dolores, natus odit laudantium ipsum dolore vitae blanditiis rem consequuntur magni alias labore recusandae eum sapiente, perferendis assumenda omnis ab, molestiae accusantium. Quasi repellat, nesciunt provident assumenda quos velit eos maiores quam at, earum consequuntur consequatur deserunt explicabo! Facere architecto laboriosam accusantium aspernatur possimus reprehenderit sapiente odit quasi. Ab est officiis, explicabo, qui at quam illo commodi et provident ad assumenda?
-                    </p>')
+                    echo "<h1 class='mt-5'>Send Mail</h1><hr>";
                 ?>
+                <form action="" method="POST">
+					<div class="mb-3">
+						<input type="email" class="form-control" name="email" placeholder="Email">
+					</div>
+					<div class="mb-3">
+						<input type="text" class="form-control" name="subject" placeholder="Subject">
+					</div>
+					<div class="mb-3">
+						<textarea name="message" rows="4" class="form-control" placeholder="Message"></textarea>
+					</div>
+					<div class="mb-3">
+						<input type="submit" value="Send" class="btn btn-outline-success">
+						<input type="reset" value="Clear Form" class="btn btn-outline-secondary">
+					</div>
+				</form>
+				<?php 
+					if ($_POST) {
+						$email   = $_POST['email'];
+						$subject = $_POST['subject'];
+						$message = $_POST['message'];
+				?>
+				<?php if (mail('ofac@misena.edu.co', "Subject: $subject", "Message: $message", "From: $email")): ?>
+					<div class="alert alert-success">
+						The email has been sent successfully!
+					</div>
+				<?php else: ?>
+					<div class="alert alert-danger">
+						The email could not be sent!
+					</div>
+				<?php endif ?>
+				<?php } ?>
             </div>
         </div>
     </main>

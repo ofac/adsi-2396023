@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?="Hello World!"?></title>
+    <title><?="Loop Do While"?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -21,7 +21,7 @@
                     <a class="nav-link" aria-current="page" href="index.php">&larr; Main Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">01- Hello World</a>
+                    <a class="nav-link active" aria-current="page" href="#">16- Loop Do While</a>
                 </li>
             </ul>
             </div>
@@ -31,11 +31,23 @@
         <div class="row">
             <div class="col-md-6 offset-md-3 text-center">
                 <?php 
-                    echo "<h1 class='mt-5'>Hello World!</h1><hr>";
-                    print('<p class="text-start text-muted lh-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem ea id odit corporis sapiente vel tenetur aut molestias ducimus optio magnam maiores repudiandae alias aperiam eveniet ipsum dolore, explicabo inventore quam nam possimus, voluptatem corrupti. Non quas excepturi dolores, natus odit laudantium ipsum dolore vitae blanditiis rem consequuntur magni alias labore recusandae eum sapiente, perferendis assumenda omnis ab, molestiae accusantium. Quasi repellat, nesciunt provident assumenda quos velit eos maiores quam at, earum consequuntur consequatur deserunt explicabo! Facere architecto laboriosam accusantium aspernatur possimus reprehenderit sapiente odit quasi. Ab est officiis, explicabo, qui at quam illo commodi et provident ad assumenda?
-                    </p>')
+                    echo "<h1 class='mt-5'>Loop Do While</h1><hr>";
                 ?>
+                <nav>
+			  		<ul class="pagination pagination-lg justify-content-center mt-5">
+				    	<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+						<?php 
+							$i = 1;
+							do {
+								if($i % 2 != 0) {
+									echo '<li class="page-item"><a class="page-link" href="#">'.$i.'</a></li>';
+								}
+								$i++;
+							} while($i <= 20);
+						?>
+					<li class="page-item"><a class="page-link" href="#">Next</a></li>
+			  	</ul>
+			  </nav>
             </div>
         </div>
     </main>

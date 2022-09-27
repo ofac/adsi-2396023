@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Burger</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/tailwind-3.0.23.js"></script>
+    <style>
+        .open {
+            animation: animMenuOpen 0.5s ease-in forwards;
+        }
+        @keyframes animMenuOpen {
+            0%   { transform: translateY(-240px); }
+            100% { transform: translateY(0px);    }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b 
+             from-indigo-500 
+             to-white-500 
+             min-h-screen">
+    <main class="min-h-screen">
+        <header class="bg-indigo-900 p-4 gap-4 justify-between text-white flex z-10 relative">
+            <a class="text-2xl" href="">Site</a>
+            <nav class="md:flex hidden mt-1">
+                <ul class="flex flex-row gap-4">
+                <li>
+                    <a class="bg-pink-600 p-4 rounded-md hover:bg-pink-900 transition" href="">Home</a>
+                </li>
+                <li>
+                    <a class="bg-pink-600 p-4 rounded-md hover:bg-pink-900 transition" href="">Services</a>
+                </li>
+                <li>
+                    <a class="bg-pink-600 p-4 rounded-md hover:bg-pink-900 transition" href="">Portfolio</a>
+                </li>
+                <li>
+                    <a class="bg-pink-600 p-4 rounded-md hover:bg-pink-900 transition" href="">Contact</a>
+                </li>
+                </ul>
+            </nav>
+            <button id="btn-burger" class="md:hidden flex">
+                <svg xmlns="http://www.w3.org/2000/svg" id="svg-content" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>     
+        </header>
+
+    <nav id="menu-mobile" class="text-white hidden lg:hidden relative z-0">
+    <ul class="flex flex-col divide-y divide-blue-100">
+        <li>
+            <a class="bg-pink-600 p-4 flex hover:bg-pink-900 transition" href="">Home</a>
+        </li>
+        <li>
+            <a class="bg-pink-600 p-4 flex hover:bg-pink-900 transition" href="">Services</a>
+        </li>
+        <li>
+            <a class="bg-pink-600 p-4 flex hover:bg-pink-900 transition" href="">Portfolio</a>
+         </li>
+        <li>
+            <a class="bg-pink-600 p-4 flex hover:bg-pink-900 transition" href="">Contact</a>
+        </li>
+        </ul>
+    </nav>
+
+    </main>
+    <script>
+        const btn__burger  = document.getElementById('btn-burger');
+        const menu__mobile = document.getElementById('menu-mobile');
+        const svg__content = document.getElementById('svg-content');
+        var   status__icon = true;  
+
+        const icon__close   = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+        const icon__open    = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+
+        btn__burger.onclick = function() {
+            menu__mobile.classList.toggle('hidden');
+            if (status__icon) {
+                svg__content.innerHTML = icon__close;
+                menu__mobile.classList.add('open');
+                status__icon = false;
+            } else {
+                svg__content.innerHTML = icon__open;
+                menu__mobile.classList.remove('open');
+                status__icon = true;
+            }
+        }
+    </script>
+</body>
+</html>

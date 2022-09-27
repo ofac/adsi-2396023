@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        .bg-stripes-white {
+            background-image: linear-gradient(135deg,#ffffff88 10%,
+                                                       transparent 0,
+                                                       transparent 50%,
+                                                     #ffffff88 0,
+                                                     #ffffff88 60%,
+                                                     transparent 0,
+                                                     transparent);
+            background-size: 7.07px 7.07px;
+        }
+    </style>
+    <script src="js/tailwind-3.0.23.js"></script>
+</head>
+<body class="bg-gradient-to-r 
+             from-indigo-500 
+             to-pink-500 
+             min-h-screen">
+    <main class="bg-black 
+                 bg-opacity-50
+                 min-h-screen">
+        <header class="bg-indigo-100 
+                       bg-opacity-80 
+                       p-10 
+                       shadow-xl
+                       flex
+                       items-center
+                       justify-center">
+            <a class="text-2xl
+                      bg-indigo-900
+                      text-white
+                      py-2
+                      px-4
+                      mr-20
+                      transition
+                      hover:bg-indigo-800
+                      hover:-translate-x-1
+                      rounded-md" href="index.html"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </a>
+            <h1 class="text-center 
+                       text-4xl 
+                       font-bold 
+                       text-indigo-900">Spacing</h1>
+        </header>
+        <section class="p-10 
+                        mx-auto 
+                        text-white
+                        w-10/12
+                        my-0">
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       mb-10">Padding</h2>
+            <h3 class="my-4">Single Side</h3>
+                       <div class="relative rounded-xl overflow-auto p-8">
+                        <div class="flex flex-wrap items-start justify-center font-mono text-white text-sm font-bold leading-6 -mx-5">
+                          <div class="flex items-start">
+                            <div class="flex-none px-5">
+                              <div class="bg-indigo-700 shadow-lg rounded-lg overflow-hidden">
+                                <div class="h-6 bg-stripes-white rounded-t-lg"></div>
+                                <div class="p-4">pt-6</div>
+                              </div>
+                            </div>
+                            <div class="flex-none px-5 pt-6">
+                              <div class="flex bg-indigo-700 shadow-lg rounded-lg overflow-hidden">
+                                <div class="flex-none p-4">pr-4</div>
+                                <div class="flex-none w-4 bg-stripes-white"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flex items-start">
+                            <div class="flex-none px-5 pt-6">
+                              <div class="bg-indigo-700 shadow-lg rounded-lg overflow-hidden">
+                                <div class="p-4">pb-8</div>
+                                <div class="h-8 bg-stripes-white"></div>
+                              </div>
+                            </div>
+                            <div class="flex-none flex px-5 pt-6">
+                              <div class="flex bg-indigo-700 shadow-lg rounded-lg overflow-hidden">
+                                <div class="flex-none w-2 bg-stripes-white"></div>
+                                <div class="flex-none p-4">pl-2</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            <h3 class="my-4">Horizontan / Vertical</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
+                  <div class="bg-indigo-700 rounded-lg shadow-lg overflow-hidden flex">
+                    <div class="w-8 bg-stripes-white"></div>
+                    <div class="p-4">px-8</div>
+                    <div class="w-8 bg-stripes-white"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
+                  <div class="bg-indigo-700 rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-8 bg-stripes-white"></div>
+                    <div class="p-4">py-8</div>
+                    <div class="h-8 bg-stripes-white"></div>
+                  </div>
+                </div>
+              </div>
+            <h3 class="my-4">All Sides</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
+                  <div class="bg-indigo-700 bg-stripes-white rounded-lg shadow-lg p-8">
+                    <div class="bg-indigo-700 p-4">p-8</div>
+                  </div>
+                </div>
+              </div>
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Margin</h2>
+            <h3 class="my-4">Single Side</h3>           
+            <div class="relative rounded-xl overflow-auto">
+            <div class="relative font-mono text-white text-sm font-bold leading-6 h-56">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 md:-ml-24">
+                <div class="flow-root bg-stripes-white rounded-b-lg">
+                    <div class="bg-indigo-700 rounded-lg shadow-lg p-4 mt-6">mt-6</div>
+                </div>
+                </div>
+                <div class="absolute right-0 top-1/2 -translate-y-1/2">
+                <div class="flow-root bg-stripes-white rounded-l-lg">
+                    <div class="flex-none bg-indigo-700 rounded-lg shadow-lg p-4 mr-4">mr-4</div>
+                </div>
+                </div>
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 md:ml-24">
+                <div class="flow-root bg-stripes-white rounded-t-lg">
+                    <div class="bg-indigo-700 rounded-lg shadow-lg p-4 mb-8">mb-8</div>
+                </div>
+                </div>
+                <div class="absolute left-0 top-1/2 -translate-y-1/2">
+                <div class="flow-root bg-stripes-white rounded-r-lg">
+                    <div class="flex-none bg-indigo-700 rounded-lg shadow-lg p-4 ml-2">ml-2</div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <h3 class="my-4">Horizontan / Vertical</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
+                  <div class="bg-stripes-white rounded-lg">
+                    <div class="bg-indigo-700 rounded-lg shadow-lg p-4 mx-8">mx-8</div>
+                  </div>
+                </div>
+              </div>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
+                  <div class="flow-root bg-stripes-white rounded-lg">
+                    <div class="bg-indigo-700 rounded-lg shadow-lg p-4 my-8">my-8</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="my-4">All Sides</h3>
+              <div class="relative rounded-xl overflow-auto p-8">
+                  <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
+                    <div class="flow-root bg-stripes-white rounded-lg">
+                      <div class="bg-indigo-700 rounded-lg shadow-lg p-4 m-8">m-8</div>
+                    </div>
+                  </div>
+                </div>
+            <h3 class="my-4">Negative Values</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
+                  <div class="flex flex-col items-center">
+                    <div class="relative w-36 h-16 bg-indigo-200/20 border border-sky-700/10 rounded-md overflow-hidden"></div>
+                    <div class="relative -mt-8 bg-indigo-700 rounded-md flex items-center justify-center p-4 shadow-lg">-mt-8</div>
+                  </div>
+                </div>
+              </div>
+            <!--  -->
+            <h2 class="text-2xl
+                       border-b-2
+                       opacity-80
+                       pb-4
+                       my-10">Space Between</h2>
+            <h3 class="my-4">Horizontal space</h3>
+            <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex justify-start font-mono text-white text-sm font-bold leading-6">
+                  <div class="flex space-x-4 bg-stripes-white rounded-lg">
+                    <div class="w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-indigo-700">01</div>
+                    <div class="w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-indigo-700">02</div>
+                    <div class="w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-indigo-700">03</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="my-4">Vertical space</h3>
+              <div class="relative rounded-xl overflow-auto p-8">
+                <div class="flex flex-col justify-center text-center w-full font-mono text-white text-sm font-bold leading-6">
+                  <div class="flex flex-col space-y-4 bg-stripes-white rounded-lg">
+                    <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-indigo-700">01</div>
+                    <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-indigo-700">02</div>
+                    <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-indigo-700">03</div>
+                  </div>
+                </div>
+              </div>
+
+        </section>
+    </main>
+</body>
+</html>
